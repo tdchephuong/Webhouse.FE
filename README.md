@@ -1,5 +1,5 @@
 ## Libraries
-Vortigern uses the following libraries and tools:
+Webhouse uses the following libraries and tools:
 
 #### Core
 - [TypeScript](https://www.typescriptlang.org/)
