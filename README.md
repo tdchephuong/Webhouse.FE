@@ -1,21 +1,3 @@
-# Vortigern
-[![Build Status](https://travis-ci.org/barbar/vortigern.svg?branch=master)](https://travis-ci.org/barbar/vortigern)
-[![Dependency Status](https://david-dm.org/barbar/vortigern.svg)]()
-[![devDependency Status](https://david-dm.org/barbar/vortigern/dev-status.svg)]()
-[![Code Climate](https://codeclimate.com/github/barbar/vortigern/badges/gpa.svg)](https://codeclimate.com/github/barbar/vortigern)
-[![GitHub issues](https://img.shields.io/github/issues/barbar/vortigern.svg)](https://github.com/barbar/vortigern/issues)
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/barbar/vortigern/develop/LICENSE)
-___
-
-<img src="https://barbaruploads.s3.amazonaws.com/bicoz/vortigern.png" width="100%" />
-
-**Vortigern** is our opinionated boilerplate for crafting universal web applications by using modern technologies like TypeScript, React and Redux.
-
-[![TypeScript](https://barbaruploads.s3.amazonaws.com/bicoz/typescript.png)](https://www.typescriptlang.org/) 
-[![React](https://barbaruploads.s3.amazonaws.com/bicoz/react.png)](https://github.com/facebook/react) 
-[![Redux](https://barbaruploads.s3.amazonaws.com/bicoz/redux.png)](https://github.com/reactjs/redux)
-
-
 ## Libraries
 Vortigern uses the following libraries and tools:
 
@@ -63,27 +45,6 @@ Vortigern uses the following libraries and tools:
 - [Compression](https://github.com/expressjs/compression) for gzip compression
 - [Serve Favicon](https://github.com/expressjs/serve-favicon) for serving favicon.
 
-#### Developer Experience
-- [Typings](https://github.com/typings/typings) for installing type definitions of external libraries.
-- [tslint](https://github.com/palantir/tslint) for linting TypeScript files.
-- [stylelint](https://github.com/stylelint/stylelint) for linting styles.
-- [Redux Logger](https://github.com/theaqua/redux-logger)
-- [Redux DevTools](https://github.com/gaearon/redux-devtools)
-- [Chalk](https://github.com/chalk/chalk) for colored terminal logs.
-
-#### Testing
-- [Karma](https://github.com/karma-runner/karma) as test runner with following plugins
-  - [Karma-Webpack](https://github.com/webpack/karma-webpack)
-  - [Karma-Mocha](https://github.com/karma-runner/karma-mocha)
-  - [Karma-Chai](https://github.com/xdissent/karma-chai)
-  - [Karma-Coverage](https://github.com/karma-runner/karma-coverage)
-  - [Karma-PhantomJS Launcher](https://github.com/karma-runner/karma-phantomjs-launcher)
-- [Mocha](https://github.com/mochajs/mocha) as testing framework.
-- [Chai](https://github.com/chaijs/chai) as assertion library.
-- [Enzyme](https://github.com/jquery/jquery) for rendering React Components.
-- [Fetch Mock](https://github.com/wheresrhys/fetch-mock) for testing async actions.
-- [Redux Mock Store](https://github.com/arnaudbenard/redux-mock-store) for creating mock stores.
-
 ## Directory Structure
 ```bash
 .
@@ -117,16 +78,6 @@ Vortigern uses the following libraries and tools:
 ├── tsconfig.json               # TypeScript transpiler configuration.
 ├── tslint.json                 # Configures tslint.
 └── typings.json                # Typings package configuration.
-```
-
-## Installation
-
-You can clone from this repository or [install the latest version](https://github.com/barbar/vortigern/releases) as a zip file or a tarball. 
-
-```bash
-$ git clone https://github.com/barbar/vortigern
-$ cd vortigern
-$ npm install
 ```
 
 ## Usage
@@ -163,21 +114,3 @@ $ typings install dt~<package> --global --save
 # or if it's located on npm
 $ typings install <package> --save
 ```
-
-## Credits
-
-Vortigern is released under the [MIT license](LICENSE). 
-
-The image in this README belongs to [hhvferry.com](http://www.hhvferry.com/vortscrap.html).
-
-___
-
-## [Barbar Startup Factory](https://www.barbar.com.tr/?ref=vortigern)
-
-<a target="_blank" href="https://barbar.digital/?ref=vortigern-barbar-logo"><img src="https://barbaruploads.s3.amazonaws.com/bicoz/logo2x.png" height="55px" /></a>
-
-We help startups start and stay started by helping them plan, strategize, fund and execute their vision. 
-
-You can contact us at [hey@barbar.digital](mailto:hey@barbar.digital)
-
-Be sure to check out available [jobs at Barbar](https://github.com/barbar/hr).
