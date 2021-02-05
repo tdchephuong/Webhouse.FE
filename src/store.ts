@@ -1,13 +1,12 @@
-import { configureStore, ThunkAction, Action } from "@reduxjs/toolkit";
+import { combineReducers, createStore } from "redux";
+// import { devToolsEnhancer } from 'redux-devtools-extension'
+import { CounterReducer } from "./features/counter";
 
-export const store = configureStore({
-  reducer: {},
+/* Create root reducer, containing all features of the application */
+const rootReducer = combineReducers({
+  count: CounterReducer,
 });
 
-export type RootState = ReturnType<typeof store.getState>;
-export type AppThunk<ReturnType = void> = ThunkAction<
-  ReturnType,
-  RootState,
-  unknown,
-  Action<string>
->;
+const store = createStore(rootReducer);
+
+export default store;
