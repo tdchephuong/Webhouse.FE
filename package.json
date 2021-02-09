@@ -14,6 +14,7 @@
     "@types/react-router": "^5.1.11",
     "@types/react-router-dom": "^5.1.7",
     "@types/redux-devtools-extension": "^2.13.2",
+    "enzyme": "^3.11.0",
     "husky": "^4.3.8",
     "lint-staged": "^10.5.3",
     "prettier": "^2.2.1",
@@ -25,15 +26,17 @@
     "react-scripts": "4.0.1",
     "redux": "^4.0.5",
     "redux-devtools-extension": "^2.13.8",
+    "redux-mock-store": "^1.5.4",
     "redux-thunk": "^2.3.0",
-    "typescript": "^4.0.3",
+    "typescript": "^4.1.3",
     "web-vitals": "^0.2.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "npm run watch:css && react-scripts start",
+    "build": "npm run watch:css && react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "watch:css": "postcss src/assets/tailwindcss.css -o src/assets/lib.css"
   },
   "eslintConfig": {
     "extends": [
@@ -73,13 +76,20 @@
     }
   },
   "lint-staged": {
-    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+    "src/**/*.{js,jsx,ts,tsx,css,scss,md}": [
       "prettier --write"
     ]
   },
   "devDependencies": {
+    "@types/enzyme": "^3.10.8",
     "@types/react-redux": "^7.1.16",
     "@types/redux": "^3.6.0",
-    "@types/redux-thunk": "^2.1.0"
+    "@types/redux-mock-store": "^1.0.2",
+    "@types/redux-thunk": "^2.1.0",
+    "autoprefixer": "^10.2.4",
+    "postcss": "^8.2.5",
+    "postcss-cli": "^8.3.1",
+    "react-app-rewired": "^2.1.8",
+    "tailwindcss": "^2.0.2"
   }
 }

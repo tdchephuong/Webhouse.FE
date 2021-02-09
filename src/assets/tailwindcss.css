@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: SVN Sofia Pro;
+    font-style: italic;
+    font-weight: 400;
+    src: url("./fonts/SVN-Sofia-Pro-Black-Italic.ttf") format("ttf");
+  }
+  @font-face {
+    font-family: SVN Sofia Pro;
+    font-weight: 400;
+    src: url("./fonts/SVN-Sofia-Pro-Black.ttf") format("ttf");
+  }
+  @font-face {
+    font-family: SVN Sofia Pro;
+    font-style: italic;
+    font-weight: 700;
+    src: url("./fonts/SVN-Sofia-Pro-Bold-Italic.ttf") format("ttf");
+  }
+  @font-face {
+    font-family: SVN Sofia Pro;
+    font-weight: 700;
+    src: url("./fonts/SVN-Sofia-Pro-Bold.ttf") format("ttf");
+  }
+}
