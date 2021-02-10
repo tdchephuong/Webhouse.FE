@@ -14,6 +14,7 @@
     "@types/react-router": "^5.1.11",
     "@types/react-router-dom": "^5.1.7",
     "@types/redux-devtools-extension": "^2.13.2",
+    "classnames": "^2.2.6",
     "enzyme": "^3.11.0",
     "husky": "^4.3.8",
     "lint-staged": "^10.5.3",
@@ -71,8 +72,7 @@
     ]
   },
   "husky": {
-    "hooks": {
-    }
+    "hooks": {}
   },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx,css,scss,md}": [
@@ -80,6 +80,7 @@
     ]
   },
   "devDependencies": {
+    "@types/classnames": "^2.2.11",
     "@types/enzyme": "^3.10.8",
     "@types/react-redux": "^7.1.16",
     "@types/redux": "^3.6.0",
@@ -88,7 +89,6 @@
     "autoprefixer": "^10.2.4",
     "postcss": "^8.2.5",
     "postcss-cli": "^8.3.1",
-    "react-app-rewired": "^2.1.8",
     "tailwindcss": "^2.0.2"
   }
 }

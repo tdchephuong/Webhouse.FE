@@ -11,7 +11,7 @@ export const Navbar: React.FC = () => {
   };
   return (
     <>
-      <nav className="container mx-auto flex items-center flex-wrap py-3">
+      <nav className="container mx-auto flex items-center flex-wrap py-3.5">
         <NavLink to="/" className="inline-flex items-center mr-12">
           <img className="w-40 h-6" src={logo} alt="" />
         </NavLink>
@@ -68,7 +68,7 @@ export const Navbar: React.FC = () => {
           <div className="lg:inline-flex lg:flex-row lg:w-auto w-full lg:items-center items-start flex flex-col lg:h-auto ml-auto">
             <NavLink
               to="/"
-              className="border border-blue-500 bg-blue-500 text-white rounded-3xl px-4 py-2 transition duration-500 ease select-none hover:bg-blue-600 focus:outline-none focus:shadow-outline text-white text-base md:text-md"
+              className="border border-blue-500 bg-blue-500 text-white rounded-3xl px-4 py-2 transition duration-500 ease select-none hover:bg-blue-600 focus:outline-none focus:shadow-outline text-base md:text-md"
             >
               Login
             </NavLink>

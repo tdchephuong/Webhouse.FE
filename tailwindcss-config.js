@@ -8,7 +8,7 @@ module.exports = {
     }),
     extend: {
       colors: {
-        blue: { 500: '#5074F6' }
+        blue: { 500: '#5074f6' }
       },
       backgroundColor: {
         default: '#e5e5e5'

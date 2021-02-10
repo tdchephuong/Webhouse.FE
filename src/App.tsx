@@ -2,10 +2,11 @@ import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import "./App.css";
 
-import { Navbar } from "./components/Navbar";
-import { Footer } from "./components/Footer";
 import { About } from "./pages/About";
+import { Footer } from "./components/Footer";
 import { Home } from "./pages/Home";
+import { Navbar } from "./components/Navbar";
+import { Templates } from "./pages/Templates";
 
 function App() {
   return (
@@ -13,7 +14,8 @@ function App() {
       <Navbar />
         <Switch>
           <Route path="/" component={Home} exact />
-          <Route path="/about" component={About} />
+          <Route path="/templates" component={Templates} />
+          <Route path="/about-us" component={About} />
         </Switch>
       <Footer />
     </BrowserRouter>

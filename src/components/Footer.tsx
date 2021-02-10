@@ -17,15 +17,15 @@ export const Footer: React.FC = () => {
             <div>
               <img className="w-72 h-10 inline" src={logo} alt="" />
             </div>
-            <p className="mt-7 leading-normal w-96">
+            <p className="mt-7 leading-normal max-w-sm">
               Web House is a leading cloud-based development platform with
               millions of users worldwide. We make it easy for everyone to
               create a beautiful, professional web presence.
             </p>
-            <div className="mt-6 flex">
+            <div className="mt-6">
               <NavLink
                 to="/contact"
-                className="border border-blue-500 bg-blue-500 text-white rounded-3xl px-4 py-2 transition duration-500 ease select-none hover:bg-blue-600 focus:outline-none focus:shadow-outline text-white text-base md:text-md"
+                className="border border-blue-500 bg-blue-500 text-white rounded-3xl px-4 py-2 transition duration-500 ease select-none hover:bg-blue-600 focus:outline-none focus:shadow-outline text-base md:text-md"
               >
                 Contact Us
               </NavLink>
