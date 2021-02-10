@@ -11,12 +11,10 @@ function App() {
   return (
     <BrowserRouter>
       <Navbar />
-      <div className="my-24">
         <Switch>
           <Route path="/" component={Home} exact />
           <Route path="/about" component={About} />
         </Switch>
-      </div>
       <Footer />
     </BrowserRouter>
   );

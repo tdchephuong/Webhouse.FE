@@ -1,4 +1,3 @@
-const colors = require('tailwindcss/colors')
 module.exports = {
   purge: [],
   darkMode: false, // or 'media' or 'class'
@@ -9,8 +8,11 @@ module.exports = {
     }),
     extend: {
       colors: {
-        blue: { ...colors.blue, 500: '#5074F6' }
-      }
+        blue: { 500: '#5074F6' }
+      },
+      backgroundColor: {
+        default: '#e5e5e5'
+      },
     },
   },
   variants: {

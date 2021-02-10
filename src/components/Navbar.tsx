@@ -11,8 +11,8 @@ export const Navbar: React.FC = () => {
   };
   return (
     <>
-      <nav className="container mx-auto flex items-center flex-wrap bg-white py-3">
-        <NavLink to="/" className="inline-flex items-center p-2 mr-6">
+      <nav className="container mx-auto flex items-center flex-wrap py-3">
+        <NavLink to="/" className="inline-flex items-center mr-12">
           <img className="w-40 h-6" src={logo} alt="" />
         </NavLink>
         <button
@@ -42,25 +42,25 @@ export const Navbar: React.FC = () => {
           <div className="lg:inline-flex lg:flex-row lg:w-auto w-full lg:items-center items-start flex flex-col lg:h-auto">
             <NavLink
               to="/"
-              className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded items-center justify-center hover:underline text-base md:text-lg"
+              className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded items-center justify-center hover:underline text-base md:text-lg font-light"
             >
               Explore
             </NavLink>
             <NavLink
               to="/"
-              className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded items-center justify-center hover:underline text-base md:text-lg"
+              className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded items-center justify-center hover:underline text-base md:text-lg font-light"
             >
               About Us
             </NavLink>
             <NavLink
               to="/"
-              className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded items-center justify-center hover:underline text-base md:text-lg"
+              className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded items-center justify-center hover:underline text-base md:text-lg font-light"
             >
               Pricing
             </NavLink>
             <NavLink
               to="/"
-              className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded items-center justify-center hover:underline text-base md:text-lg"
+              className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded items-center justify-center hover:underline text-base md:text-lg font-light"
             >
               Contact
             </NavLink>
