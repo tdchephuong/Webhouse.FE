@@ -7,6 +7,7 @@ import { Footer } from "./components/Footer";
 import { Home } from "./pages/Home";
 import { Navbar } from "./components/Navbar";
 import { Templates } from "./pages/Templates";
+import { Contact } from "./pages/Contact";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/" component={Home} exact />
           <Route path="/templates" component={Templates} />
           <Route path="/about-us" component={About} />
+          <Route path="/contact" component={Contact} />
         </Switch>
       <Footer />
     </BrowserRouter>

@@ -9,9 +9,9 @@ import insta from "assets/img/logo-instagram.svg";
 
 export const Footer: React.FC = () => {
   return (
-    <div>
+    <div className="bg-white">
       <div className="border-t border-default"></div>
-      <div className="container py-24 mx-auto">
+      <div className="container py-12 lg:py-24 mx-auto px-1.5 lg:px-0">
         <div className="sm:flex">
           <div className="sm:w-1/2 sm:mt-0 mt-8 h-auto">
             <div>
@@ -70,7 +70,7 @@ export const Footer: React.FC = () => {
                 <NavLink to="/">Blog</NavLink>
               </li>
               <li className="hover:underline mt-4">
-                <NavLink to="/">Contact Us</NavLink>
+                <NavLink to="/contact">Contact Us</NavLink>
               </li>
               <li className="hover:underline mt-4">
                 <NavLink to="/">Sitemap</NavLink>
@@ -89,12 +89,12 @@ export const Footer: React.FC = () => {
         </div>
       </div>
       <div className="border-t border-default"></div>
-      <div className="container mx-auto py-6">
-        <div className="sm:flex">
-          <div className="sm:w-1/2 sm:mt-0 mt-8 h-auto">
+      <div className="container mx-auto py-6 px-1.5 lg:px-0">
+        <div className="flex">
+          <div className="w-1/2">
             Copyright © Web House 2021
           </div>
-          <div className="sm:w-1/2 sm:mt-0 mt-8 h-auto ml-auto text-right">
+          <div className="w-1/2 lg:ml-auto text-right">
             <img className="ml-6 inline-block" src={facebook} alt="" />
             <img className="ml-6 inline-block" src={linkedin} alt="" />
             <img className="ml-6 inline-block" src={youtube} alt="" />

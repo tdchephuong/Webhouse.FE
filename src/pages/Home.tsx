@@ -48,8 +48,8 @@ export const Home: React.FC = () => {
   }, [checkScrollTop])
 
   return (
-    <div className="bg-default">
-      <div className="container mx-auto pt-24">
+    <>
+      <div className="container mx-auto lg:pt-24 px-1.5 lg:px-0">
         <div className="sm:flex">
           <div className="sm:w-1/2 sm:mt-0 mt-8">
             <span className="text-xl">Welcome to</span>{" "}
@@ -66,15 +66,15 @@ export const Home: React.FC = () => {
             </div>
           </div>
           <div className="sm:w-1/2 sm:mt-0 mt-8">
-            <img className="w-full h-auto" src={imgIntroduction} alt="" />
+            <img className="w-full h-auto shadow-xl" src={imgIntroduction} alt="" />
           </div>
         </div>
       </div>
-      <div className="container mx-auto pt-14">
+      <div className="container mx-auto pt-14 px-1.5 lg:px-0">
         <div className="text-5xl text-black font-medium">Stunning Templates</div>
         <div className="text-2xl mt-1">Start with free HTML website templates and bring your vision to life.</div>
         <div className="mt-12 pb-16">
-          <div className="grid gap-x-7 gap-y-9 grid-cols-4">
+          <div className="grid gap-x-7 gap-y-9 grid-cols-2 lg:grid-cols-4">
             <div>
               <TemplateItem img_url={category_11} name={'Ethical Hacker'} />
             </div>
@@ -122,8 +122,8 @@ export const Home: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className="py-24 bg-white">
-        <div className="container mx-auto">
+      <div className="py-12 lg:py-24 bg-white">
+        <div className="container mx-auto px-1.5 lg:px-0">
           <div className="sm:flex">
             <div className="sm:w-1/2 sm:mt-0 mt-8">
               <div className="w-10/12 text-5xl text-black txt-introduction font-medium mt-4">About Us</div>
@@ -148,6 +148,6 @@ export const Home: React.FC = () => {
         </div>
       </div>
       <img className={buttonScrollUpClass} src={btnScrollUp} alt="" onClick={scrollToTop}/>
-    </div>
+    </>
   );
 };

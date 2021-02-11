@@ -5,14 +5,13 @@ module.exports = {
     borderColor: (theme) => ({
       ...theme('colors'),
       default: '#e8e8e8',
+      'primary-input': '#d8d8d8'
     }),
     extend: {
       colors: {
-        blue: { 500: '#5074f6' }
-      },
-      backgroundColor: {
-        default: '#e5e5e5'
-      },
+        blue: { 500: '#5074f6' },
+        active: { default: '#acacac' }
+      }
     },
   },
   variants: {

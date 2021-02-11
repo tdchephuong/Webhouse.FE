@@ -11,7 +11,7 @@ export const Navbar: React.FC = () => {
   };
   return (
     <>
-      <nav className="container mx-auto flex items-center flex-wrap py-3.5">
+      <nav className="container mx-auto flex items-center flex-wrap py-3.5 px-1.5 lg:px-0">
         <NavLink to="/" className="inline-flex items-center mr-12">
           <img className="w-40 h-6" src={logo} alt="" />
         </NavLink>
@@ -59,7 +59,7 @@ export const Navbar: React.FC = () => {
               Pricing
             </NavLink>
             <NavLink
-              to="/"
+              to="/contact"
               className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded items-center justify-center hover:underline text-base md:text-lg font-light"
             >
               Contact
@@ -75,6 +75,7 @@ export const Navbar: React.FC = () => {
           </div>
         </div>
       </nav>
+    
     </>
   );
 };
