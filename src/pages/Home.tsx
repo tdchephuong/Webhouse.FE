@@ -76,40 +76,40 @@ export const Home: React.FC = () => {
         <div className="mt-12 pb-16">
           <div className="grid gap-x-7 gap-y-9 grid-cols-2 lg:grid-cols-4">
             <div>
-              <TemplateItem img_url={category_11} name={'Ethical Hacker'} />
+              <TemplateItem img_url={category_11} name={'Ethical Hacker'} classNameImg="home-image-template" />
             </div>
             <div>
-              <TemplateItem img_url={category_20} name={'Project Manager'} />
+              <TemplateItem img_url={category_20} name={'Project Manager'} classNameImg="home-image-template" />
             </div>
             <div>
-              <TemplateItem img_url={category_19} name={'Scrum Master'} />
+              <TemplateItem img_url={category_19} name={'Scrum Master'} classNameImg="home-image-template" />
             </div>
             <div>
-              <TemplateItem img_url={category_2} name={'Software Developer'} />
+              <TemplateItem img_url={category_2} name={'Software Developer'} classNameImg="home-image-template" />
             </div>
             <div>
-              <TemplateItem img_url={category_10} name={'Project Manager'} />
+              <TemplateItem img_url={category_10} name={'Project Manager'} classNameImg="home-image-template" />
             </div>
             <div>
-              <TemplateItem img_url={category_6} name={'Software Tester'} />
+              <TemplateItem img_url={category_6} name={'Software Tester'} classNameImg="home-image-template" />
             </div>
             <div>
-              <TemplateItem img_url={category_3} name={'Scrum Maste'} />
+              <TemplateItem img_url={category_3} name={'Scrum Maste'} classNameImg="home-image-template" />
             </div>
             <div>
-              <TemplateItem img_url={category_4} name={'Project Manager'} />
+              <TemplateItem img_url={category_4} name={'Project Manager'} classNameImg="home-image-template" />
             </div>
             <div>
-              <TemplateItem img_url={category_7} name={'Software Tester'} />
+              <TemplateItem img_url={category_7} name={'Software Tester'} classNameImg="home-image-template" />
             </div>
             <div>
-              <TemplateItem img_url={category_16} name={'Software Development Manager'} />
+              <TemplateItem img_url={category_16} name={'Software Development Manager'} classNameImg="home-image-template" />
             </div>
             <div>
-              <TemplateItem img_url={category_9} name={'Team Leader'} />
+              <TemplateItem img_url={category_9} name={'Team Leader'} classNameImg="home-image-template" />
             </div>
             <div>
-              <TemplateItem img_url={category_13} name={'UI/UX Designer'} />
+              <TemplateItem img_url={category_13} name={'UI/UX Designer'} classNameImg="home-image-template" />
             </div>
           </div>
           <div className="mt-12 text-center">
