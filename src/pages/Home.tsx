@@ -115,7 +115,7 @@ export const Home: React.FC = () => {
           <div className="mt-12 text-center">
             <NavLink
               to="/templates"
-              className="inline-block border border-blue-500 text-blue-500 rounded-full px-10 pt-5 pb-3.5 transition duration-500 ease select-none hover:border-blue-800 hover:text-blue-800 text-base md:text-2xl"
+              className="inline-block border border-blue-500 text-blue-500 rounded-full px-10 pt-5 pb-3.5 transition duration-500 ease select-none hover:text-white hover:bg-blue-500 text-base md:text-2xl"
             >
               Explore All Templates
             </NavLink>
@@ -135,7 +135,7 @@ export const Home: React.FC = () => {
               <div className="mt-9">
                 <NavLink
                   to="/about-us"
-                  className="inline-block border border-blue-500 text-blue-500 rounded-full px-6 pt-3.5 pb-2.5 transition duration-500 ease select-none hover:border-blue-800 hover:text-blue-800 text-base md:text-lg"
+                  className="inline-block border border-blue-500 text-blue-500 rounded-full px-6 pt-3.5 pb-2.5 transition duration-500 ease select-none hover:text-white hover:bg-blue-500 text-base md:text-lg"
                 >
                   Read more
                 </NavLink>

@@ -41,26 +41,30 @@ export const Navbar: React.FC = () => {
         >
           <div className="lg:inline-flex lg:flex-row lg:w-auto w-full lg:items-center items-start flex flex-col lg:h-auto">
             <NavLink
-              to="/"
+              activeClassName="text-blue-500"
               className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded items-center justify-center hover:text-blue-500 text-base md:text-lg font-light"
+              to="/templates"
             >
               Explore
             </NavLink>
             <NavLink
-              to="/"
               className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded items-center justify-center hover:text-blue-500 text-base md:text-lg font-light"
+              exact
+              to="/"
             >
               About Us
             </NavLink>
             <NavLink
-              to="/"
               className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded items-center justify-center hover:text-blue-500 text-base md:text-lg font-light"
+              exact
+              to="/"
             >
               Pricing
             </NavLink>
             <NavLink
-              to="/contact"
+              activeClassName="text-blue-500"
               className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded items-center justify-center hover:text-blue-500 text-base md:text-lg font-light"
+              to="/contact"
             >
               Contact
             </NavLink>

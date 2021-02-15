@@ -34,28 +34,28 @@ export const Footer: React.FC = () => {
           <div className="sm:w-1/4 h-auto sm:mt-0 mt-8">
             <div className="text-black text-2xl mb-4">Category</div>
             <ul className="list-reset">
-              <li className="hover:underline mt-4">
+              <li className="hover:text-blue-500 mt-4">
                 <NavLink to="/">Beauty</NavLink>
               </li>
-              <li className="hover:underline mt-4">
+              <li className="hover:text-blue-500 mt-4">
                 <NavLink to="/">Bussiness</NavLink>
               </li>
-              <li className="hover:underline mt-4">
+              <li className="hover:text-blue-500 mt-4">
                 <NavLink to="/">Fashion</NavLink>
               </li>
-              <li className="hover:underline mt-4">
+              <li className="hover:text-blue-500 mt-4">
                 <NavLink to="/">Health</NavLink>
               </li>
-              <li className="hover:underline mt-4">
+              <li className="hover:text-blue-500 mt-4">
                 <NavLink to="/">Landing Pages</NavLink>
               </li>
-              <li className="hover:underline mt-4">
+              <li className="hover:text-blue-500 mt-4">
                 <NavLink to="/">Services</NavLink>
               </li>
-              <li className="hover:underline mt-4">
+              <li className="hover:text-blue-500 mt-4">
                 <NavLink to="/">Travel</NavLink>
               </li>
-              <li className="hover:underline mt-4">
+              <li className="hover:text-blue-500 mt-4">
                 <NavLink to="/">Porfolio</NavLink>
               </li>
             </ul>
@@ -63,25 +63,25 @@ export const Footer: React.FC = () => {
           <div className="sm:w-1/4 h-auto sm:mt-0 mt-8">
             <div className="text-black text-2xl mb-4">Company</div>
             <ul className="list-reset">
-              <li className="hover:underline mt-4">
+              <li className="hover:text-blue-500 mt-4">
                 <NavLink to="/">About Us</NavLink>
               </li>
-              <li className="hover:underline mt-4">
+              <li className="hover:text-blue-500 mt-4">
                 <NavLink to="/">Blog</NavLink>
               </li>
-              <li className="hover:underline mt-4">
+              <li className="hover:text-blue-500 mt-4">
                 <NavLink to="/contact">Contact Us</NavLink>
               </li>
-              <li className="hover:underline mt-4">
+              <li className="hover:text-blue-500 mt-4">
                 <NavLink to="/">Sitemap</NavLink>
               </li>
-              <li className="hover:underline mt-4">
+              <li className="hover:text-blue-500 mt-4">
                 <NavLink to="/">Support center</NavLink>
               </li>
-              <li className="hover:underline mt-4">
+              <li className="hover:text-blue-500 mt-4">
                 <NavLink to="/">Terms of Use</NavLink>
               </li>
-              <li className="hover:underline mt-4">
+              <li className="hover:text-blue-500 mt-4">
                 <NavLink to="/">Privacy Policy</NavLink>
               </li>
             </ul>

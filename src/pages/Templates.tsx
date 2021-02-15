@@ -38,15 +38,20 @@ export const Templates: React.FC = () => {
   const updateTemplateType = (value: number) => {
     setActiveTemplateType(value)
   }
+
   return (
     <>
-      <div className="bg-white pt-16">
+      <div className="bg-white pt-16 pb-9">
         <div className="container mx-auto px-1.5 lg:px-0">
           <div className="text-4xl text-black template-title">
             Pick the Website Template You Love
           </div>
-          <div className="mt-9 sm:flex items-center">
-            <div className="sm:w-3/4 sm:mt-0 mt-8 flex">
+        </div>
+      </div>
+      <div className="bg-white sticky top-0">
+        <div className="container mx-auto">
+          <div className="sm:flex items-center">
+            <div className="sm:w-3/4 md:pb-0 pb-8 flex">
               <div className={firstTemplateTypeClassName(0)} onClick={() => updateTemplateType(0)}>All</div>
               <div className={middleTemplateTypeClassName(1)} onClick={() => updateTemplateType(1)}>Business</div>
               <div className={middleTemplateTypeClassName(2)} onClick={() => updateTemplateType(2)}>Services</div>
@@ -57,15 +62,15 @@ export const Templates: React.FC = () => {
               <div className={middleTemplateTypeClassName(7)} onClick={() => updateTemplateType(7)}>Landing Pages</div>
               <div className="flex-initial cursor-pointer ml-3 py-3">...</div>
             </div>
-            <div className="sm:w-1/4 sm:mt-0 mt-8">
+            <div className="sm:w-1/4">
               <div className="relative">
                 <img className="inline-block align-middle w-6 h-6 absolute top-1/2 -mt-3 left-1 pointer-events-none" src={iconSearch} alt=""/> <input type="search" className="border-0 pl-9 py-3 w-full" placeholder="Search" />
               </div>
             </div>
           </div>
         </div>
-        <div className="border-t border-default"></div>
       </div>
+      <div className="border-t border-default"></div>
       <div className="container mx-auto px-1.5 lg:px-0">
         <div className="grid gap-x-7 gap-y-12 grid-cols-2 lg:grid-cols-4 pt-12">
           <div>
