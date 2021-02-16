@@ -10,7 +10,8 @@ module.exports = {
     extend: {
       colors: {
         blue: { 500: '#5074f6' },
-        active: { default: '#acacac' }
+        active: { default: '#acacac' },
+        submenu: { default: '#eef1fe' }
       }
     },
   },

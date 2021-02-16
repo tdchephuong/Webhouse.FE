@@ -1,18 +1,24 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { Windmill } from '@windmill/react-ui'
+
 import "./assets/lib.css";
 import "./index.css";
 import App from "./App";
+import myTheme from './customize-windmill'
+
 // import store from "./store";
 // import { Provider } from "react-redux";
 import reportWebVitals from "./reportWebVitals";
 
 ReactDOM.render(
   <React.StrictMode>
+    <Windmill theme={myTheme}>
     {/* <Provider store={store}>
       <App />
     </Provider> */}
-    <App />
+      <App />
+    </Windmill>
   </React.StrictMode>,
   document.getElementById("root")
 );

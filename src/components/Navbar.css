@@ -1,0 +1,8 @@
+.bg-arrow {
+  background-image: url(../assets/img/icon-arrow_light.svg);
+  background-repeat: no-repeat;
+  background-position: 95% 50%;
+}
+.bg-arrow:hover {
+  background-image: url(../assets/img/icon-arrow_black.svg);
+}

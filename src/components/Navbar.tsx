@@ -1,14 +1,20 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
+import { Dropdown, DropdownItem } from '@windmill/react-ui'
 
 import logo from "assets/img/logo.svg";
+import './Navbar.css'
 
 export const Navbar: React.FC = () => {
   const [active, setActive] = useState(false);
+  const [isOpenDropdown, setIsOpenDropdown] = useState(false)
 
   const handleClick = () => {
     setActive(!active);
   };
+  const toggleDropdown = () => {
+    setIsOpenDropdown(!isOpenDropdown)
+  }
   return (
     <>
       <nav className="container mx-auto flex items-center flex-wrap py-3.5 px-1.5 lg:px-0">
@@ -40,13 +46,38 @@ export const Navbar: React.FC = () => {
           } w-full lg:inline-flex lg:flex-grow lg:w-auto`}
         >
           <div className="lg:inline-flex lg:flex-row lg:w-auto w-full lg:items-center items-start flex flex-col lg:h-auto">
-            <NavLink
-              activeClassName="text-blue-500"
-              className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded items-center justify-center hover:text-blue-500 text-base md:text-lg font-light"
-              to="/templates"
+            <div
+              className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded items-center justify-center hover:text-blue-500 text-base md:text-lg font-light relative"
+              onClick={toggleDropdown}
             >
-              Explore
-            </NavLink>
+              <span className="cursor-pointer">Explore</span>
+              <Dropdown isOpen={isOpenDropdown} onClose={() => {}} className="top-full z-10">
+                <DropdownItem className="bg-arrow">
+                  <span>Bussiness</span>
+                </DropdownItem>
+                <DropdownItem className="bg-arrow">
+                  <span>Services</span>
+                </DropdownItem>
+                <DropdownItem className="bg-arrow">
+                  <span>Health</span>
+                </DropdownItem>
+                <DropdownItem className="bg-arrow">
+                  <span>Beauty</span>
+                </DropdownItem>
+                <DropdownItem className="bg-arrow">
+                  <span>Fashion</span>
+                </DropdownItem>
+                <DropdownItem className="bg-arrow">
+                  <span>Landing Pages</span>
+                </DropdownItem>
+                <DropdownItem className="bg-arrow">
+                  <span>Porfolio</span>
+                </DropdownItem>
+                <DropdownItem className="bg-arrow">
+                  <span>Travel</span>
+                </DropdownItem>
+              </Dropdown>
+            </div>
             <NavLink
               className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded items-center justify-center hover:text-blue-500 text-base md:text-lg font-light"
               exact
