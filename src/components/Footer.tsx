@@ -10,7 +10,7 @@ import insta from "assets/img/logo-instagram.svg";
 export const Footer: React.FC = () => {
   return (
     <div className="bg-white">
-      <div className="border-t border-default"></div>
+      <div className="border-t border-default" />
       <div className="container py-12 lg:py-24 mx-auto px-1.5 lg:px-0">
         <div className="sm:flex">
           <div className="sm:w-1/2 sm:mt-0 mt-8 h-auto">
@@ -88,12 +88,10 @@ export const Footer: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className="border-t border-default"></div>
+      <div className="border-t border-default" />
       <div className="container mx-auto py-6 px-1.5 lg:px-0">
         <div className="flex">
-          <div className="w-1/2">
-            Copyright © Web House 2021
-          </div>
+          <div className="w-1/2">Copyright © Web House 2021</div>
           <div className="w-1/2 lg:ml-auto text-right">
             <img className="ml-6 inline-block" src={facebook} alt="" />
             <img className="ml-6 inline-block" src={linkedin} alt="" />

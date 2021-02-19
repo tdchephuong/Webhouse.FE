@@ -1,18 +1,16 @@
 import React from "react";
 
-import { Footer } from "./components/Footer";
 import { Navbar } from "./components/Navbar";
 import { TGeneralLayout } from "./GeneralLayout.type";
 
-export const BasicLayout: React.FC<TGeneralLayout> = (
+export const OnlyHeaderLayout: React.FC<TGeneralLayout> = (
   props: TGeneralLayout
 ) => {
   const { child: Child } = props;
   return (
     <>
-      <Navbar />
+      <Navbar type="SwitchModeNav"/>
       <Child />
-      <Footer />
     </>
   );
 };
