@@ -7,7 +7,7 @@ import { TGeneralLayout } from "./GeneralLayout.type";
 export const BasicLayout: React.FC<TGeneralLayout> = (
   props: TGeneralLayout
 ) => {
-  const { child: Child } = props;
+  const { children: Child } = props;
   return (
     <>
       <Navbar />

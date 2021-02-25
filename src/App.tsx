@@ -14,16 +14,16 @@ function App() {
   return (
     <BrowserRouter>
       <Switch>
-        <Route path="/" render={() => <BasicLayout child={Home} />} exact />
+        <Route path="/" render={() => <BasicLayout children={Home} />} exact />
         <Route
           path="/templates"
-          render={() => <BasicLayout child={Templates} />}
+          render={() => <BasicLayout children={Templates} />}
         />
-        <Route path="/about-us" render={() => <BasicLayout child={About} />} />
-        <Route path="/contact" render={() => <BasicLayout child={Contact} />} />
+        <Route path="/about-us" render={() => <BasicLayout children={About} />} />
+        <Route path="/contact" render={() => <BasicLayout children={Contact} />} />
         <Route
           path="/template/:id"
-          render={() => <OnlyHeaderLayout child={DetailTemplate} />}
+          render={() => <OnlyHeaderLayout children={DetailTemplate} />}
         />
       </Switch>
     </BrowserRouter>

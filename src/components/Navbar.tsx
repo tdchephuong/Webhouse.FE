@@ -139,12 +139,9 @@ export const Navbar: React.FC<TNavbar> = ({type: navbarType = 'BasicNav'}) => {
             </div>
           </div>
           <div className="lg:inline-flex lg:flex-row flex lg:h-auto justify-end">
-            <NavLink
-              to="/"
-              className="px-4 py-2 transition select-none focus:outline-none focus:shadow-outline text-base md:text-md"
-            >
+            <div className="py-2 select-none text-base md:text-md text-blue-500">
               #1469
-            </NavLink>
+            </div>
             <NavLink
               to="/"
               className="border border-blue-500 bg-blue-500 text-white rounded-3xl px-4 py-2 transition duration-500 ease select-none hover:bg-blue-600 focus:outline-none focus:shadow-outline text-base md:text-md ml-4"

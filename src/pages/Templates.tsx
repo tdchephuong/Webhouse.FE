@@ -125,52 +125,70 @@ export const Templates: React.FC = () => {
       <div className="container mx-auto px-1.5 lg:px-0">
         <div className="grid gap-x-7 gap-y-12 grid-cols-2 lg:grid-cols-4 pt-12">
           <div>
-            <TemplateItem img_url={template_11} name={"Create 01 name"} />
+          
+            <TemplateItem detailLink="/template/1469" img_url={template_11} name={"Create 01 name"} />
+            
           </div>
           <div>
-            <TemplateItem img_url={template_14} name={"Create 01 name"} />
+          
+            <TemplateItem detailLink="/template/1469" img_url={template_14} name={"Create 01 name"} />
+            
           </div>
           <div>
-            <TemplateItem img_url={template_6} name={"Create 01 name"} />
+          
+            <TemplateItem detailLink="/template/1469" img_url={template_6} name={"Create 01 name"} />
+            
           </div>
           <div>
-            <TemplateItem img_url={template_13} name={"Create 01 name"} />
+          
+            <TemplateItem detailLink="/template/1469" img_url={template_13} name={"Create 01 name"} />
+            
           </div>
           <div>
-            <TemplateItem img_url={template_10} name={"Create 01 name"} />
+          
+            <TemplateItem detailLink="/template/1469" img_url={template_10} name={"Create 01 name"} />
+            
           </div>
           <div>
-            <TemplateItem img_url={template_2} name={"Create 01 name"} />
+          
+            <TemplateItem detailLink="/template/1469" img_url={template_2} name={"Create 01 name"} />
+            
           </div>
           <div>
-            <TemplateItem img_url={template_3} name={"Create 01 name"} />
+          
+            <TemplateItem detailLink="/template/1469" img_url={template_3} name={"Create 01 name"} />
+            
           </div>
           <div>
-            <TemplateItem img_url={template_4} name={"Create 01 name"} />
+          
+            <TemplateItem detailLink="/template/1469" img_url={template_4} name={"Create 01 name"} />
+            
           </div>
           <div>
-            <TemplateItem img_url={template_5} name={"Create 01 name"} />
+          
+            <TemplateItem detailLink="/template/1469" img_url={template_5} name={"Create 01 name"} />
+            
           </div>
           <div>
-            <TemplateItem img_url={template_12} name={"Create 01 name"} />
+            <TemplateItem detailLink="/template/1469" img_url={template_12} name={"Create 01 name"} />
           </div>
           <div>
-            <TemplateItem img_url={template_8} name={"Create 01 name"} />
+            <TemplateItem detailLink="/template/1469" img_url={template_8} name={"Create 01 name"} />
           </div>
           <div>
-            <TemplateItem img_url={template_20} name={"Create 01 name"} />
+            <TemplateItem detailLink="/template/1469" img_url={template_20} name={"Create 01 name"} />
           </div>
           <div>
-            <TemplateItem img_url={template_15} name={"Create 01 name"} />
+            <TemplateItem detailLink="/template/1469" img_url={template_15} name={"Create 01 name"} />
           </div>
           <div>
-            <TemplateItem img_url={template_17} name={"Create 01 name"} />
+            <TemplateItem detailLink="/template/1469" img_url={template_17} name={"Create 01 name"} />
           </div>
           <div>
-            <TemplateItem img_url={template_18} name={"Create 01 name"} />
+            <TemplateItem detailLink="/template/1469" img_url={template_18} name={"Create 01 name"} />
           </div>
           <div>
-            <TemplateItem img_url={template_21} name={"Create 01 name"} />
+            <TemplateItem detailLink="/template/1469" img_url={template_21} name={"Create 01 name"} />
           </div>
         </div>
         <div className="flex flex-col items-center mt-16 pb-24">

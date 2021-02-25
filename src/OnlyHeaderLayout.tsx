@@ -6,7 +6,7 @@ import { TGeneralLayout } from "./GeneralLayout.type";
 export const OnlyHeaderLayout: React.FC<TGeneralLayout> = (
   props: TGeneralLayout
 ) => {
-  const { child: Child } = props;
+  const { children: Child } = props;
   return (
     <>
       <Navbar type="SwitchModeNav"/>

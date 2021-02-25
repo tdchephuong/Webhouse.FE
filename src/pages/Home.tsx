@@ -26,7 +26,7 @@ import "./Home.css";
 export const Home: React.FC = () => {
   const [showScroll, setShowScroll] = useState(false);
   const buttonScrollUpClass = classNames(
-    "fixed top-1/3 right-7 cursor-pointer",
+    "button-scroll fixed cursor-pointer",
     {
       hidden: !showScroll
     }
@@ -88,86 +88,98 @@ export const Home: React.FC = () => {
           <div className="grid gap-x-7 gap-y-9 grid-cols-2 lg:grid-cols-4">
             <div>
               <TemplateItem
+                classNameImg="home-image-template"
+                detailLink="/template/1469"
                 img_url={category_11}
-                name={"Ethical Hacker"}
-                classNameImg="home-image-template"
+                name="Ethical Hacker"
               />
             </div>
             <div>
               <TemplateItem
+                classNameImg="home-image-template"
+                detailLink="/template/1469"
                 img_url={category_20}
-                name={"Project Manager"}
-                classNameImg="home-image-template"
+                name="Project Manager"
               />
             </div>
             <div>
               <TemplateItem
+                classNameImg="home-image-template"
+                detailLink="/template/1469"
                 img_url={category_19}
-                name={"Scrum Master"}
-                classNameImg="home-image-template"
+                name="Scrum Master"
               />
             </div>
             <div>
               <TemplateItem
+                classNameImg="home-image-template"
+                detailLink="/template/1469"
                 img_url={category_2}
-                name={"Software Developer"}
-                classNameImg="home-image-template"
+                name="Software Developer"
               />
             </div>
             <div>
               <TemplateItem
+                classNameImg="home-image-template"
+                detailLink="/template/1469"
                 img_url={category_10}
-                name={"Project Manager"}
-                classNameImg="home-image-template"
+                name="Project Manager"
               />
             </div>
             <div>
               <TemplateItem
+                classNameImg="home-image-template"
+                detailLink="/template/1469"
                 img_url={category_6}
-                name={"Software Tester"}
-                classNameImg="home-image-template"
+                name="Software Tester"
               />
             </div>
             <div>
               <TemplateItem
+                classNameImg="home-image-template"
+                detailLink="/template/1469"
                 img_url={category_3}
-                name={"Scrum Maste"}
-                classNameImg="home-image-template"
+                name="Scrum Maste"
               />
             </div>
             <div>
               <TemplateItem
+                classNameImg="home-image-template"
+                detailLink="/template/1469"
                 img_url={category_4}
-                name={"Project Manager"}
-                classNameImg="home-image-template"
+                name="Project Manager"
               />
             </div>
             <div>
               <TemplateItem
+                classNameImg="home-image-template"
+                detailLink="/template/1469"
                 img_url={category_7}
-                name={"Software Tester"}
-                classNameImg="home-image-template"
+                name="Software Tester"
               />
             </div>
             <div>
               <TemplateItem
+                classNameImg="home-image-template"
+                detailLink="/template/1469"
                 img_url={category_16}
-                name={"Software Development Manager"}
-                classNameImg="home-image-template"
+                name="Software Development Manager"
               />
             </div>
             <div>
               <TemplateItem
+                classNameImg="home-image-template"
+                detailLink="/template/1469"
                 img_url={category_9}
-                name={"Team Leader"}
-                classNameImg="home-image-template"
+                name="Team Leader"
               />
             </div>
             <div>
               <TemplateItem
-                img_url={category_13}
-                name={"UI/UX Designer"}
                 classNameImg="home-image-template"
+                detailLink="/template/1469"
+                img_url={category_13}
+                name="UI/UX Designer"
               />
             </div>
           </div>

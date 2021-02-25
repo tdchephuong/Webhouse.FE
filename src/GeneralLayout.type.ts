@@ -1,3 +1,3 @@
 export interface TGeneralLayout {
-  child: React.FunctionComponent;
+  children: React.FunctionComponent;
 }
