@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { Dropdown, DropdownItem } from "@windmill/react-ui";
 
+import { ContactModal } from "components/ContactModal"
 import { TNavbar } from "./Navbar.type"
 
 import logo from "assets/img/logo.svg";
@@ -12,12 +13,19 @@ import "./Navbar.css";
 export const Navbar: React.FC<TNavbar> = ({type: navbarType = 'BasicNav'}) => {
   const [active, setActive] = useState(false);
   const [isOpenDropdown, setIsOpenDropdown] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleClick = () => {
     setActive(!active);
   };
+  const onUpdateOpenModal = () => {
+    setIsModalOpen(false)
+  };
   const toggleDropdown = () => {
     setIsOpenDropdown(!isOpenDropdown);
+  };
+  const toggleContactModal = () => {
+    setIsModalOpen(!isModalOpen)
   };
   return (
     <>
@@ -101,13 +109,12 @@ export const Navbar: React.FC<TNavbar> = ({type: navbarType = 'BasicNav'}) => {
               >
                 Pricing
               </NavLink>
-              <NavLink
-                activeClassName="text-blue-500"
-                className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded items-center justify-center hover:text-blue-500 text-base md:text-lg font-light"
-                to="/contact"
+              <div
+                className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded items-center justify-center hover:text-blue-500 text-base md:text-lg font-light cursor-pointer"
+                onClick={toggleContactModal}
               >
                 Contact
-              </NavLink>
+              </div>
             </div>
             <div className="lg:inline-flex lg:flex-row lg:w-auto w-full lg:items-center items-start flex flex-col lg:h-auto ml-auto">
               <NavLink
@@ -120,6 +127,7 @@ export const Navbar: React.FC<TNavbar> = ({type: navbarType = 'BasicNav'}) => {
           </div>
         </nav>
       }
+      <ContactModal modalOpen={isModalOpen} cbUpdateModal={onUpdateOpenModal}/>
       {'SwitchModeNav' === navbarType&&
         <nav className="container mx-auto grid grid-flow-col grid-cols-3 py-3.5 px-1.5 lg:px-0">
           <NavLink to="/" className="inline-flex items-center">

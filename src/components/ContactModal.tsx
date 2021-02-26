@@ -1,14 +1,19 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Modal, ModalBody, ModalFooter, Button } from "@windmill/react-ui";
 
-import { TContactModal } from "./ContactModal.type"
+import { TContactModal } from "./ContactModal.type";
 
 export const ContactModal:React.FC<TContactModal> = (props: TContactModal) => {
-  const { modalOpen } = props
+  const { modalOpen, cbUpdateModal } = props
   const [ isModalOpen, setIsModalOpen ] = useState(modalOpen)
+
+  useEffect(() => {
+    setIsModalOpen(modalOpen)
+  }, [modalOpen])
   function closeModal() {
-    setIsModalOpen(false)
+    cbUpdateModal()
   }
+
   return (
     <Modal isOpen={isModalOpen} onClose={closeModal}>
       <ModalBody>

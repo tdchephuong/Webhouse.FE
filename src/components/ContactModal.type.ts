@@ -1,3 +1,6 @@
+import { FunctionComponent } from "react";
+
 export interface TContactModal {
-  modalOpen: false
+  modalOpen: boolean;
+  cbUpdateModal: () => void
 }
