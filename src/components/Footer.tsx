@@ -1,6 +1,8 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
+import { ContactPopupItem } from "components/ContactPopupItem"
+
 import logo from "assets/img/logo.svg";
 import facebook from "assets/img/logo-facebook.svg";
 import linkedin from "assets/img/logo-linkedin.svg";
@@ -23,12 +25,11 @@ export const Footer: React.FC = () => {
               create a beautiful, professional web presence.
             </p>
             <div className="mt-6">
-              <NavLink
-                to="/contact"
-                className="border border-blue-500 bg-blue-500 text-white rounded-3xl px-4 py-2 transition duration-500 ease select-none hover:bg-blue-600 focus:outline-none focus:shadow-outline text-base md:text-md"
+              <span
+                className="border border-blue-500 bg-blue-500 text-white rounded-3xl px-4 py-2 transition duration-500 ease select-none hover:bg-blue-600 focus:outline-none focus:shadow-outline text-base md:text-md cursor-pointer"
               >
-                Contact Us
-              </NavLink>
+                <ContactPopupItem contactText="Contact Us"/>
+              </span>
             </div>
           </div>
           <div className="sm:w-1/4 h-auto sm:mt-0 mt-8">
@@ -69,8 +70,8 @@ export const Footer: React.FC = () => {
               <li className="hover:text-blue-500 mt-4">
                 <NavLink to="/">Blog</NavLink>
               </li>
-              <li className="hover:text-blue-500 mt-4">
-                <NavLink to="/contact">Contact Us</NavLink>
+              <li className="hover:text-blue-500 mt-4 cursor-pointer">
+                <div><ContactPopupItem contactText="Contact Us"/></div>
               </li>
               <li className="hover:text-blue-500 mt-4">
                 <NavLink to="/">Sitemap</NavLink>

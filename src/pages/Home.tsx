@@ -3,19 +3,9 @@ import React, { useCallback, useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 
 import { TemplateItem } from "components/TemplateItem";
+import themeApi from 'api/theme'
+import TTheme from 'api/theme.type'
 
-import category_11 from "assets/img/category_11.png";
-import category_20 from "assets/img/category_20.png";
-import category_19 from "assets/img/category_19.png";
-import category_2 from "assets/img/category_2.png";
-import category_10 from "assets/img/category_10.png";
-import category_6 from "assets/img/category_6.png";
-import category_3 from "assets/img/category_3.png";
-import category_4 from "assets/img/category_4.png";
-import category_7 from "assets/img/category_7.png";
-import category_16 from "assets/img/category_16.png";
-import category_9 from "assets/img/category_9.png";
-import category_13 from "assets/img/category_13.png";
 import image_22 from "assets/img/image_22.jpg";
 import imgIntroduction from "assets/img/img-introduction.png";
 import btnScrollUp from "assets/img/icon-scroll_up.png";
@@ -23,8 +13,11 @@ import logo from "assets/img/logo.svg";
 
 import "./Home.css";
 
+const themeList: Array<TTheme> = []
+
 export const Home: React.FC = () => {
   const [showScroll, setShowScroll] = useState(false);
+  const [themes, setThemes] = useState(themeList);
   const buttonScrollUpClass = classNames(
     "button-scroll fixed cursor-pointer",
     {
@@ -44,6 +37,11 @@ export const Home: React.FC = () => {
       setShowScroll(true);
     }
   }, [setShowScroll]);
+  useEffect(() => {
+    themeApi().getTheme().then(docs => {
+      setThemes(docs.data.data.matches);
+    })
+  }, [])
 
   useEffect(() => {
     window.addEventListener("scroll", checkScrollTop);
@@ -86,102 +84,18 @@ export const Home: React.FC = () => {
         </div>
         <div className="mt-12 pb-16">
           <div className="grid gap-x-7 gap-y-9 grid-cols-2 lg:grid-cols-4">
-            <div>
-              <TemplateItem
-                classNameImg="home-image-template"
-                detailLink="/template/1469"
-                img_url={category_11}
-                name="Ethical Hacker"
-              />
-            </div>
-            <div>
-              <TemplateItem
-                classNameImg="home-image-template"
-                detailLink="/template/1469"
-                img_url={category_20}
-                name="Project Manager"
-              />
-            </div>
-            <div>
-              <TemplateItem
-                classNameImg="home-image-template"
-                detailLink="/template/1469"
-                img_url={category_19}
-                name="Scrum Master"
-              />
-            </div>
-            <div>
-              <TemplateItem
-                classNameImg="home-image-template"
-                detailLink="/template/1469"
-                img_url={category_2}
-                name="Software Developer"
-              />
-            </div>
-            <div>
-              <TemplateItem
-                classNameImg="home-image-template"
-                detailLink="/template/1469"
-                img_url={category_10}
-                name="Project Manager"
-              />
-            </div>
-            <div>
-              <TemplateItem
-                classNameImg="home-image-template"
-                detailLink="/template/1469"
-                img_url={category_6}
-                name="Software Tester"
-              />
-            </div>
-            <div>
-              <TemplateItem
-                classNameImg="home-image-template"
-                detailLink="/template/1469"
-                img_url={category_3}
-                name="Scrum Maste"
-              />
-            </div>
-            <div>
-              <TemplateItem
-                classNameImg="home-image-template"
-                detailLink="/template/1469"
-                img_url={category_4}
-                name="Project Manager"
-              />
-            </div>
-            <div>
-              <TemplateItem
-                classNameImg="home-image-template"
-                detailLink="/template/1469"
-                img_url={category_7}
-                name="Software Tester"
-              />
-            </div>
-            <div>
-              <TemplateItem
-                classNameImg="home-image-template"
-                detailLink="/template/1469"
-                img_url={category_16}
-                name="Software Development Manager"
-              />
-            </div>
-            <div>
-              <TemplateItem
-                classNameImg="home-image-template"
-                detailLink="/template/1469"
-                img_url={category_9}
-                name="Team Leader"
-              />
-            </div>
-            <div>
-              <TemplateItem
-                classNameImg="home-image-template"
-                detailLink="/template/1469"
-                img_url={category_13}
-                name="UI/UX Designer"
-              />
-            </div>
+            {
+              themes&&themes.map(theme => (
+                <div key={theme.id}>
+                  <TemplateItem
+                    classNameImg="home-image-template"
+                    detailLink="/template/1469"
+                    img_url={theme&&theme.previews&&theme.previews.landscape_preview.landscape_url}
+                    name={theme.name}
+                  />
+                </div>
+              ))
+            }
           </div>
           <div className="mt-12 text-center">
             <NavLink

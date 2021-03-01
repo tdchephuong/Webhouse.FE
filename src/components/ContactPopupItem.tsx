@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 
 import { ContactModal } from "./ContactModal"
+import { TContactPopupItem } from "./ContactPopupItem.type"
 
-export const ContactPopupItem: React.FC = () => {
+export const ContactPopupItem: React.FC<TContactPopupItem> = (props: TContactPopupItem) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const { contactText = 'Contact' } = props
   const onUpdateOpenModal = () => {
     setIsModalOpen(false)
   };
@@ -13,7 +15,7 @@ export const ContactPopupItem: React.FC = () => {
   return (
     <>
       <span onClick={toggleContactModal}>
-        Contact
+        {contactText}
       </span>
       <ContactModal modalOpen={isModalOpen} cbUpdateModal={onUpdateOpenModal}/>
     </>
