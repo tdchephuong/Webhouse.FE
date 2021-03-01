@@ -15,7 +15,7 @@ export const ContactModal:React.FC<TContactModal> = (props: TContactModal) => {
   }
 
   return (
-    <Modal isOpen={isModalOpen} onClose={closeModal}>
+    <Modal isOpen={isModalOpen} onClose={closeModal} className="bg-transparent">
       <ModalBody>
       <div className="sm:flex">
         <div className="sm:w-1/2">
