@@ -35,7 +35,8 @@
     "web-vitals": "^0.2.4"
   },
   "scripts": {
-    "start": "npm run watch:css && react-scripts start",
+    "start-mac": "npm run watch:css && PORT=3006 react-scripts start",
+    "start-windows": "npm run watch:css && set PORT=3006 react-scripts start",
     "build": "npm run watch:css && react-scripts build",
     "watch:css": "postcss src/assets/tailwindcss.css -o src/assets/lib.css"
   },

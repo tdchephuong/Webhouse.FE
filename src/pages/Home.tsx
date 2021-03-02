@@ -85,7 +85,7 @@ export const Home: React.FC = () => {
         <div className="mt-12 pb-16">
           <div className="grid gap-x-7 gap-y-9 grid-cols-2 lg:grid-cols-4">
             {
-              themes&&themes.map(theme => (
+              themes&&themes.length?themes.map(theme => (
                 <div key={theme.id}>
                   <TemplateItem
                     classNameImg="home-image-template"
@@ -94,7 +94,7 @@ export const Home: React.FC = () => {
                     name={theme.name}
                   />
                 </div>
-              ))
+              )):(<div className="text-center text-lg">No template found</div>)
             }
           </div>
           <div className="mt-12 text-center">
