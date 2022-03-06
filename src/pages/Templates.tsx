@@ -1,34 +1,25 @@
 import classNames from "classnames";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import { TemplateItem } from "components/TemplateItem";
+// import themeApi from 'api/theme'
+import TTheme from 'api/theme.type'
+import {ContactModal as Modal} from "components/ContactModal"
+import {themesData} from 'api/mock-theme-api'
 
 import iconSearch from "assets/img/icon-search.svg";
 import iconRightArrow from "assets/img/icon-right-arrow.svg";
 import iconDoubleArrowRight from "assets/img/icon-double-arrow-right.svg";
 import iconRightArrowActive from "assets/img/icon-right-arrow-active.svg";
 import iconDoubleArrowRightActive from "assets/img/icon-double-arrow-right-active.svg";
-import template_11 from "assets/img/template/template_11.jpg";
-import template_14 from "assets/img/template/template_14.jpg";
-import template_6 from "assets/img/template/template_6.jpg";
-import template_13 from "assets/img/template/template_13.jpg";
-import template_10 from "assets/img/template/template_10.jpg";
-import template_2 from "assets/img/template/template_2.jpg";
-import template_3 from "assets/img/template/template_3.jpg";
-import template_4 from "assets/img/template/template_4.jpg";
-import template_5 from "assets/img/template/template_5.jpg";
-import template_12 from "assets/img/template/template_12.jpg";
-import template_8 from "assets/img/template/template_8.jpg";
-import template_20 from "assets/img/template/template_20.jpg";
-import template_15 from "assets/img/template/template_15.jpg";
-import template_17 from "assets/img/template/template_17.jpg";
-import template_18 from "assets/img/template/template_18.jpg";
-import template_21 from "assets/img/template/template_21.jpg";
 
 import "./Templates.css";
 
 export const Templates: React.FC = () => {
   const [activeTemplateType, setActiveTemplateType] = useState(0);
+  const [themes, setThemes] = useState<Array<TTheme>>([]);
+  const [previewTheme, setPreviewThemes] = useState<TTheme>();
+  const [previewModalOpen, setPreviewModalOpen] = useState(false)
   const firstTemplateTypeClassName = (value: number) =>
     classNames("flex-initial cursor-pointer mr-3 py-3", {
       "text-blue-500 border-b-2 border-blue-500": activeTemplateType === value
@@ -40,6 +31,19 @@ export const Templates: React.FC = () => {
   const updateTemplateType = (value: number) => {
     setActiveTemplateType(value);
   };
+
+  useEffect(() => {
+    // themeApi().getTheme().then(docs => {
+    //   setThemes(docs.data.data.matches);
+    // })
+    const data = Object.assign(new Array<TTheme>(), themesData) 
+    setThemes(data);
+  }, [])
+
+  const onPreviewTheme = (theme:TTheme) => {
+    setPreviewThemes(theme)
+    setPreviewModalOpen(true)
+  }
 
   return (
     <>
@@ -124,72 +128,19 @@ export const Templates: React.FC = () => {
       <div className="border-t border-default" />
       <div className="container mx-auto px-1.5 lg:px-0">
         <div className="grid gap-x-7 gap-y-12 grid-cols-2 lg:grid-cols-4 pt-12">
-          <div>
-          
-            <TemplateItem detailLink="/template/1469" img_url={template_11} name={"Create 01 name"} />
-            
-          </div>
-          <div>
-          
-            <TemplateItem detailLink="/template/1469" img_url={template_14} name={"Create 01 name"} />
-            
-          </div>
-          <div>
-          
-            <TemplateItem detailLink="/template/1469" img_url={template_6} name={"Create 01 name"} />
-            
-          </div>
-          <div>
-          
-            <TemplateItem detailLink="/template/1469" img_url={template_13} name={"Create 01 name"} />
-            
-          </div>
-          <div>
-          
-            <TemplateItem detailLink="/template/1469" img_url={template_10} name={"Create 01 name"} />
-            
-          </div>
-          <div>
-          
-            <TemplateItem detailLink="/template/1469" img_url={template_2} name={"Create 01 name"} />
-            
-          </div>
-          <div>
-          
-            <TemplateItem detailLink="/template/1469" img_url={template_3} name={"Create 01 name"} />
-            
-          </div>
-          <div>
-          
-            <TemplateItem detailLink="/template/1469" img_url={template_4} name={"Create 01 name"} />
-            
-          </div>
-          <div>
-          
-            <TemplateItem detailLink="/template/1469" img_url={template_5} name={"Create 01 name"} />
-            
-          </div>
-          <div>
-            <TemplateItem detailLink="/template/1469" img_url={template_12} name={"Create 01 name"} />
-          </div>
-          <div>
-            <TemplateItem detailLink="/template/1469" img_url={template_8} name={"Create 01 name"} />
-          </div>
-          <div>
-            <TemplateItem detailLink="/template/1469" img_url={template_20} name={"Create 01 name"} />
-          </div>
-          <div>
-            <TemplateItem detailLink="/template/1469" img_url={template_15} name={"Create 01 name"} />
-          </div>
-          <div>
-            <TemplateItem detailLink="/template/1469" img_url={template_17} name={"Create 01 name"} />
-          </div>
-          <div>
-            <TemplateItem detailLink="/template/1469" img_url={template_18} name={"Create 01 name"} />
-          </div>
-          <div>
-            <TemplateItem detailLink="/template/1469" img_url={template_21} name={"Create 01 name"} />
-          </div>
+        {
+          themes?themes.map(theme => (
+            <div key={theme.id}>
+              <TemplateItem
+                classNameImg="home-image-template"
+                detailLink={theme.previews?.live_site?.url}
+                img_url={theme.previews?.landscape_preview?.landscape_url}
+                name={theme.name}
+              />
+              <button className="border border-blue-500 bg-blue-500 text-white rounded-3xl px-4 py-2 transition duration-500 ease select-none hover:bg-blue-600 focus:outline-none focus:shadow-outline text-base md:text-md cursor-pointer mt-4" onClick={e=>onPreviewTheme(theme)}>Preview</button>
+            </div>
+          )):(<div className="text-center text-lg">No template found</div>)
+        }
         </div>
         <div className="flex flex-col items-center mt-16 pb-24">
           <div className="flex text-gray-700">
@@ -238,6 +189,10 @@ export const Templates: React.FC = () => {
             </div>
           </div>
         </div>
+        {
+          // previewTheme&&<PreviewModal modalOpen={previewModalOpen} cbUpdateModal={closePreviewModal}>{previewTheme.previews.live_site.url}</PreviewModal>
+          <Modal modalShowed={previewModalOpen} title="Preview" toggleModal={() => setPreviewModalOpen(false)}>{previewTheme?.previews?.live_site?.url}</Modal>
+        }
       </div>
     </>
   );

@@ -1,14 +1,16 @@
 import React from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 import { TTemplateItem } from "./TemplateItem.type";
 
 export const TemplateItem: React.FC<TTemplateItem> = (props: TTemplateItem) => {
   const { img_url, name, classNameImg, detailLink } = props;
   return (
-    <Link to={detailLink}>
-      <img className={`w-auto h-60 object-cover ${classNameImg}`} src={img_url} alt="" />
-      <p className="text-black mt-3">{name}</p>
+    <div>
+      <a href={detailLink} target="_blank" rel="noreferrer">
+        <img className={`w-auto h-60 object-cover ${classNameImg}`} src={img_url} alt="" />
+        <p className="text-black mt-3">{name}</p>
+      </a>
       <div className="flex">
         <div className="w-1/2">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-5 h-5 inline-block align-middle">
@@ -23,6 +25,6 @@ export const TemplateItem: React.FC<TTemplateItem> = (props: TTemplateItem) => {
           <span className="pl-4 inline-block align-baseline">0</span>
         </div>
       </div>
-    </Link>
+    </div>
   );
 };

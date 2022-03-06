@@ -1,6 +1,3 @@
-import { FunctionComponent } from "react";
+import {TModal} from './Modal.type'
 
-export interface TContactModal {
-  modalOpen: boolean;
-  cbUpdateModal: () => void
-}
+export type TContactModal = TModal

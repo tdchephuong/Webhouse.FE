@@ -3,8 +3,9 @@ import React, { useCallback, useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 
 import { TemplateItem } from "components/TemplateItem";
-import themeApi from 'api/theme'
+// import themeApi from 'api/theme'
 import TTheme from 'api/theme.type'
+import {themesData} from 'api/mock-theme-api'
 
 import image_22 from "assets/img/image_22.jpg";
 import imgIntroduction from "assets/img/img-introduction.png";
@@ -13,11 +14,9 @@ import logo from "assets/img/logo.svg";
 
 import "./Home.css";
 
-const themeList: Array<TTheme> = []
-
 export const Home: React.FC = () => {
   const [showScroll, setShowScroll] = useState(false);
-  const [themes, setThemes] = useState(themeList);
+  const [themes, setThemes] = useState<Array<TTheme>>([]);
   const buttonScrollUpClass = classNames(
     "button-scroll fixed cursor-pointer",
     {
@@ -38,9 +37,13 @@ export const Home: React.FC = () => {
     }
   }, [setShowScroll]);
   useEffect(() => {
-    themeApi().getTheme().then(docs => {
-      setThemes(docs.data.data.matches);
-    })
+    // themeApi().getTheme().then(docs => {
+    //   // API theme need to return object matches
+    //   // we will get all atribute of entries in matches 
+    //   setThemes(docs.data.data.matches.slice(0, 8));
+    // })
+    const data = Object.assign(new Array<TTheme>(), themesData) 
+    setThemes(data.slice(0, 8));
   }, [])
 
   useEffect(() => {
@@ -85,12 +88,12 @@ export const Home: React.FC = () => {
         <div className="mt-12 pb-16">
           <div className="grid gap-x-7 gap-y-9 grid-cols-2 lg:grid-cols-4">
             {
-              themes&&themes.length?themes.map(theme => (
+              themes?themes.map(theme => (
                 <div key={theme.id}>
                   <TemplateItem
                     classNameImg="home-image-template"
-                    detailLink="/template/1469"
-                    img_url={theme&&theme.previews&&theme.previews.landscape_preview.landscape_url}
+                    detailLink={theme.previews?.live_site?.url}
+                    img_url={theme.previews?.landscape_preview?.landscape_url}
                     name={theme.name}
                   />
                 </div>

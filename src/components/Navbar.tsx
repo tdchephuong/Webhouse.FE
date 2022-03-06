@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-import { Dropdown, DropdownItem } from "@windmill/react-ui";
 
 import { TNavbar } from "./Navbar.type"
-import { ContactPopupItem } from 'components/ContactPopupItem'
+// import { ContactPopupItem } from 'components/ContactPopupItem'
 
 import logo from "assets/img/logo.svg";
 import icon_desktop from "assets/img/detail-template/icon-destop_view.png";
@@ -57,7 +56,7 @@ export const Navbar: React.FC<TNavbar> = ({type: navbarType = 'BasicNav'}) => {
                 onClick={toggleDropdown}
               >
                 <span className="cursor-pointer">Explore</span>
-                <Dropdown
+                {/* <Dropdown
                   isOpen={isOpenDropdown}
                   onClose={() => {}}
                   className="top-full z-10"
@@ -86,7 +85,7 @@ export const Navbar: React.FC<TNavbar> = ({type: navbarType = 'BasicNav'}) => {
                   <DropdownItem className="bg-arrow">
                     <span>Travel</span>
                   </DropdownItem>
-                </Dropdown>
+                </Dropdown> */}
               </div>
               <NavLink
                 className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded items-center justify-center hover:text-blue-500 text-base md:text-lg font-light"
@@ -105,7 +104,7 @@ export const Navbar: React.FC<TNavbar> = ({type: navbarType = 'BasicNav'}) => {
               <div
                 className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded items-center justify-center hover:text-blue-500 text-base md:text-lg font-light cursor-pointer"
               >
-                <ContactPopupItem/>
+                {/* <ContactPopupItem/> */}
               </div>
             </div>
             <div className="lg:inline-flex lg:flex-row lg:w-auto w-full lg:items-center items-start flex flex-col lg:h-auto ml-auto">

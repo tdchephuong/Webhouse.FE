@@ -1,0 +1,16 @@
+@layer components {
+  .custom-modal {
+    @apply overflow-y-auto;
+    @apply overflow-x-hidden;
+    @apply fixed;
+    @apply right-0;
+    @apply left-0;
+    @apply top-4;
+    @apply z-50;
+    @apply justify-center;
+    @apply items-center;
+    @apply h-modal;
+    @apply md:h-full;
+    @apply md:inset-0;
+  }
+}

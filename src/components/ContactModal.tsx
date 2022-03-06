@@ -1,22 +1,16 @@
 import React, { useState, useEffect } from "react";
-import { Modal, ModalBody, Button } from "@windmill/react-ui";
 
 import { TContactModal } from "./ContactModal.type";
+import classNames from "classnames";
 
 export const ContactModal:React.FC<TContactModal> = (props: TContactModal) => {
-  const { modalOpen, cbUpdateModal } = props
-  const [ isModalOpen, setIsModalOpen ] = useState(modalOpen)
-
-  useEffect(() => {
-    setIsModalOpen(modalOpen)
-  }, [modalOpen])
-  function closeModal() {
-    cbUpdateModal()
-  }
+  const { modalShowed, toggleModal } = props
+  const toggleModalStype = classNames("w-full px-6 py-4 overflow-hidden bg-transparent rounded-t-lg dark:bg-gray-800 sm:rounded-lg sm:m-4 sm:max-w-3xl", {
+    "hidden": !modalShowed
+  });
 
   return (
-    <Modal isOpen={isModalOpen} onClose={closeModal} className="w-full px-6 py-4 overflow-hidden bg-transparent rounded-t-lg dark:bg-gray-800 sm:rounded-lg sm:m-4 sm:max-w-3xl">
-      <ModalBody>
+    <div className={toggleModalStype}>
       <div className="sm:flex items-center">
         <div className="sm:w-2/5 bg-yellow-400 px-5 py-10 z-10">
           <div>
@@ -74,11 +68,10 @@ export const ContactModal:React.FC<TContactModal> = (props: TContactModal) => {
                 placeholder="Enter Your Message"
               />
             </div>
-            <div className="mt-6"><Button size="large" layout="outline">Submit</Button></div>
+            <div className="mt-6"><button onClick={toggleModal}>Submit</button></div>
           </form>
         </div>
       </div>
-      </ModalBody>
-    </Modal>
+    </div>
   )
 }

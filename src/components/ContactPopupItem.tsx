@@ -17,7 +17,7 @@ export const ContactPopupItem: React.FC<TContactPopupItem> = (props: TContactPop
       <span onClick={toggleContactModal}>
         {contactText}
       </span>
-      <ContactModal modalOpen={isModalOpen} cbUpdateModal={onUpdateOpenModal}/>
+      {/* <ContactModal modalOpen={isModalOpen} cbUpdateModal={onUpdateOpenModal}/> */}
     </>
   )
 }

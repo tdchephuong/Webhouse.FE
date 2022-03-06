@@ -71,7 +71,7 @@ export const Footer: React.FC = () => {
                 <NavLink to="/">Blog</NavLink>
               </li>
               <li className="hover:text-blue-500 mt-4 cursor-pointer">
-                <div><ContactPopupItem contactText="Contact Us"/></div>
+                {/* <div><ContactPopupItem contactText="Contact Us"/></div> */}
               </li>
               <li className="hover:text-blue-500 mt-4">
                 <NavLink to="/">Sitemap</NavLink>
