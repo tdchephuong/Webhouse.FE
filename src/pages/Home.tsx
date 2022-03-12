@@ -89,7 +89,7 @@ export const Home: React.FC = () => {
           <div className="grid gap-x-7 gap-y-9 grid-cols-2 lg:grid-cols-4">
             {
               themes?themes.map(theme => (
-                <div key={theme.id}>
+                <div key={theme.id} className="p-3.5 shadow-md bg-white rounded-md">
                   <TemplateItem
                     classNameImg="home-image-template"
                     detailLink={theme.previews?.live_site?.url}

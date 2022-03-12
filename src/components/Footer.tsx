@@ -25,11 +25,7 @@ export const Footer: React.FC = () => {
               create a beautiful, professional web presence.
             </p>
             <div className="mt-6">
-              <span
-                className="border border-blue-500 bg-blue-500 text-white rounded-3xl px-4 py-2 transition duration-500 ease select-none hover:bg-blue-600 focus:outline-none focus:shadow-outline text-base md:text-md cursor-pointer"
-              >
-                <ContactPopupItem contactText="Contact Us"/>
-              </span>
+              <ContactPopupItem contactText="Contact Us"/>
             </div>
           </div>
           <div className="sm:w-1/4 h-auto sm:mt-0 mt-8">

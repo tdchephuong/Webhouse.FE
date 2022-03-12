@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 
 import { TNavbar } from "./Navbar.type"
-// import { ContactPopupItem } from 'components/ContactPopupItem'
+import { ContactPopupItem } from 'components/ContactPopupItem'
 
 import logo from "assets/img/logo.svg";
 import icon_desktop from "assets/img/detail-template/icon-destop_view.png";
@@ -108,12 +108,13 @@ export const Navbar: React.FC<TNavbar> = ({type: navbarType = 'BasicNav'}) => {
               </div>
             </div>
             <div className="lg:inline-flex lg:flex-row lg:w-auto w-full lg:items-center items-start flex flex-col lg:h-auto ml-auto">
-              <NavLink
+              {/* <NavLink
                 to="/"
                 className="border border-blue-500 bg-blue-500 text-white rounded-3xl px-4 py-2 transition duration-500 ease select-none hover:bg-blue-600 focus:outline-none focus:shadow-outline text-base md:text-md"
               >
-                Login
-              </NavLink>
+                Contact
+              </NavLink> */}
+              <ContactPopupItem contactText="Contact Us"/>
             </div>
           </div>
         </nav>

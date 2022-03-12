@@ -4,8 +4,8 @@ import React, { useState, useEffect } from "react";
 import { TemplateItem } from "components/TemplateItem";
 // import themeApi from 'api/theme'
 import TTheme from 'api/theme.type'
-import {ContactModal as Modal} from "components/ContactModal"
-import {themesData} from 'api/mock-theme-api'
+import {Modal as Modal} from "components/Modal"
+import {themesData} from 'api/mock-theme-api';
 
 import iconSearch from "assets/img/icon-search.svg";
 import iconRightArrow from "assets/img/icon-right-arrow.svg";
@@ -130,7 +130,7 @@ export const Templates: React.FC = () => {
         <div className="grid gap-x-7 gap-y-12 grid-cols-2 lg:grid-cols-4 pt-12">
         {
           themes?themes.map(theme => (
-            <div key={theme.id}>
+            <div key={theme.id} className="p-3.5 shadow-md bg-white rounded-md">
               <TemplateItem
                 classNameImg="home-image-template"
                 detailLink={theme.previews?.live_site?.url}
@@ -190,8 +190,10 @@ export const Templates: React.FC = () => {
           </div>
         </div>
         {
-          // previewTheme&&<PreviewModal modalOpen={previewModalOpen} cbUpdateModal={closePreviewModal}>{previewTheme.previews.live_site.url}</PreviewModal>
-          <Modal modalShowed={previewModalOpen} title="Preview" toggleModal={() => setPreviewModalOpen(false)}>{previewTheme?.previews?.live_site?.url}</Modal>
+          previewTheme&&<Modal
+            modalShowed={previewModalOpen} 
+            toggleModal={()=>setPreviewModalOpen(false)}
+            title="Preview">{previewTheme.previews.live_site.url}</Modal>
         }
       </div>
     </>
