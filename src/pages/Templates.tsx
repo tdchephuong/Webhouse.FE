@@ -127,7 +127,7 @@ export const Templates: React.FC = () => {
       </div>
       <div className="border-t border-default" />
       <div className="container mx-auto px-1.5 lg:px-0">
-        <div className="grid gap-x-7 gap-y-12 grid-cols-2 lg:grid-cols-4 pt-12">
+        <div className="grid gap-x-7 gap-y-12 grid-cols-2 lg:grid-cols-3 pt-12">
         {
           themes?themes.map(theme => (
             <div key={theme.id} className="p-3.5 shadow-md bg-white rounded-md">
