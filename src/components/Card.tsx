@@ -2,15 +2,15 @@ import React from "react";
 // import { Link } from "react-router-dom";
 
 import { TCard } from "./Card.type";
+import "./Card.css";
 import {Rating} from "components/Rating";
 
 export const Card: React.FC<TCard> = (props: TCard) => {
-  const { img_url, name, classNameImg, detailLink, rating=0, number_of_sales, price_cents=0 } = props;
+  const { img_url, name, detailLink, rating=0, number_of_sales, price_cents=0 } = props;
   return (
-    <div>
+    <div className="grid rounded-md bg-white shadow-lg card-image">
       <a href={detailLink} target="_blank" rel="noreferrer">
-        <img className={`w-auto h-60 object-cover ${classNameImg}`} src={img_url} alt="" />
-        <p className="text-black mt-3">{name}</p>
+        <img className={`w-auto h-60 object-cover`} src={img_url} alt="" />
       </a>
       {/* <div className="flex">
         <div className="w-1/2">
@@ -26,14 +26,21 @@ export const Card: React.FC<TCard> = (props: TCard) => {
           <span className="pl-4 inline-block align-baseline">0</span>
         </div>
       </div> */}
-      <Rating color="#ffab00" count={rating} className="mt-3" />
-      <div className="grid grid-cols-2 mt-2 items-end">
-        <p>{number_of_sales?.toLocaleString()} Sales</p>
-        <p className="justify-self-end font-bold text-xl">${(price_cents/100)?.toLocaleString(undefined,{maximumFractionDigits:2})}</p>
+      <div className="px-3.5">
+        <a href={detailLink} target="_blank" rel="noreferrer">
+          <p className="text-black mt-3">{name}</p>
+        </a>
       </div>
-      <div className="grid grid-cols-2 mt-4 gap-x-3">
-        <button className="border border-gray-500 bg-gray-500 text-white rounded-lg px-4 py-2 transition duration-500 ease select-none hover:bg-blue-600 focus:outline-none focus:shadow-outline text-base md:text-md cursor-pointer block">Detail</button>
-        <button className="border border-blue-500 bg-blue-500 text-white rounded-lg px-4 py-2 transition duration-500 ease select-none hover:bg-blue-600 focus:outline-none focus:shadow-outline text-base md:text-md cursor-pointer block">Preview</button>
+      <div className="p-3.5">
+        <Rating color="#ffab00" count={rating} className="mt-3" />
+        <div className="grid grid-cols-2 mt-2 items-end">
+          <p>{number_of_sales?.toLocaleString()} Sales</p>
+          <p className="justify-self-end font-bold text-xl">${(price_cents/100)?.toLocaleString(undefined,{maximumFractionDigits:2})}</p>
+        </div>
+        <div className="grid grid-cols-2 mt-4 gap-x-3">
+          <button className="border border-gray-500 bg-gray-500 text-white rounded-lg px-4 py-2 transition duration-500 ease select-none hover:bg-gray-600 focus:outline-none focus:shadow-outline text-base md:text-md cursor-pointer block">Detail</button>
+          <button className="border border-blue-500 bg-blue-500 text-white rounded-lg px-4 py-2 transition duration-500 ease select-none hover:bg-blue-600 focus:outline-none focus:shadow-outline text-base md:text-md cursor-pointer block">Preview</button>
+        </div>
       </div>
     </div>
   );
