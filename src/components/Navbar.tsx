@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 import { TNavbar } from "./Navbar.type"
 import { ContactPopupItem } from 'components/ContactPopupItem'
@@ -12,6 +13,7 @@ import "./Navbar.css";
 export const Navbar: React.FC<TNavbar> = ({type: navbarType = 'BasicNav'}) => {
   const [active, setActive] = useState(false);
   const [isOpenDropdown, setIsOpenDropdown] = useState(false);
+  const { t } = useTranslation();
 
   const handleClick = () => {
     setActive(!active);
@@ -55,7 +57,7 @@ export const Navbar: React.FC<TNavbar> = ({type: navbarType = 'BasicNav'}) => {
                 className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded items-center justify-center hover:text-blue-500 text-base md:text-lg font-light relative"
                 onClick={toggleDropdown}
               >
-                <span className="cursor-pointer">Explore</span>
+                <span className="cursor-pointer">{t('Nav.1')}</span>
                 {/* <Dropdown
                   isOpen={isOpenDropdown}
                   onClose={() => {}}
@@ -92,14 +94,14 @@ export const Navbar: React.FC<TNavbar> = ({type: navbarType = 'BasicNav'}) => {
                 exact
                 to="/"
               >
-                About Us
+                {t('Nav.2')}
               </NavLink>
               <NavLink
                 className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded items-center justify-center hover:text-blue-500 text-base md:text-lg font-light"
                 exact
                 to="/"
               >
-                Pricing
+                {t('Nav.3')}
               </NavLink>
               <div
                 className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded items-center justify-center hover:text-blue-500 text-base md:text-lg font-light cursor-pointer"
@@ -114,7 +116,7 @@ export const Navbar: React.FC<TNavbar> = ({type: navbarType = 'BasicNav'}) => {
               >
                 Contact
               </NavLink> */}
-              <ContactPopupItem contactText="Contact Us"/>
+              <ContactPopupItem contactText={t('Nav.4')}/>
             </div>
           </div>
         </nav>

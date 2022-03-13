@@ -8,6 +8,7 @@ import App from "./App";
 // import store from "./store";
 // import { Provider } from "react-redux";
 import reportWebVitals from "./reportWebVitals";
+import './i18n'
 
 ReactDOM.render(
   <React.StrictMode>=
