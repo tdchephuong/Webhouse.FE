@@ -2,7 +2,7 @@ import classNames from "classnames";
 import React, { useCallback, useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 
-import { TemplateItem } from "components/TemplateItem";
+import { Card } from "components/Card";
 // import themeApi from 'api/theme'
 import TTheme from 'api/theme.type'
 import {themesData} from 'api/mock-theme-api'
@@ -86,16 +86,20 @@ export const Home: React.FC = () => {
           Start with free HTML website templates and bring your vision to life.
         </div>
         <div className="mt-12 pb-16">
-          <div className="grid gap-x-7 gap-y-9 grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-x-7 gap-y-9 grid-cols-2 lg:grid-cols-3">
             {
               themes?themes.map(theme => (
-                <div key={theme.id} className="p-3.5 shadow-md bg-white rounded-md">
-                  <TemplateItem
+                <div key={theme.id} className="p-3.5 shadow-lg bg-white rounded-md">
+                  <Card
                     classNameImg="home-image-template"
                     detailLink={theme.previews?.live_site?.url}
                     img_url={theme.previews?.landscape_preview?.landscape_url}
                     name={theme.name}
+                    rating={theme.rating?.rating}
+                    number_of_sales={theme.number_of_sales}
+                    price_cents={theme.price_cents}
                   />
+                  
                 </div>
               )):(<div className="text-center text-lg">No template found</div>)
             }

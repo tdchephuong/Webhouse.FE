@@ -25,16 +25,16 @@ interface TTheme {
   description?: string;
   // site?: string;
   // classification: string;
-  // price_cents: number;
-  // number_of_sales: number;
+  price_cents: number;
+  number_of_sales: number;
   // author_username: string;
   // author_url: string;
   url: string;
   // summary?: string;
-  // rating: {
-  //   rating: number;
-  //   count: number;
-  // };
+  rating: {
+    rating: number;
+    count: number;
+  };
   previews: TThemePreview;
   // attributes?: Array<{
   //   name: string;

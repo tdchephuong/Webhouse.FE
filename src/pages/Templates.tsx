@@ -1,7 +1,7 @@
 import classNames from "classnames";
 import React, { useState, useEffect } from "react";
 
-import { TemplateItem } from "components/TemplateItem";
+import { Card } from "components/Card";
 // import themeApi from 'api/theme'
 import TTheme from 'api/theme.type'
 import {Modal as Modal} from "components/Modal"
@@ -131,13 +131,15 @@ export const Templates: React.FC = () => {
         {
           themes?themes.map(theme => (
             <div key={theme.id} className="p-3.5 shadow-md bg-white rounded-md">
-              <TemplateItem
+              <Card
                 classNameImg="home-image-template"
                 detailLink={theme.previews?.live_site?.url}
                 img_url={theme.previews?.landscape_preview?.landscape_url}
                 name={theme.name}
+                rating={theme.rating?.rating}
+                number_of_sales={theme.number_of_sales}
+                price_cents={theme.price_cents}
               />
-              <button className="border border-blue-500 bg-blue-500 text-white rounded-3xl px-4 py-2 transition duration-500 ease select-none hover:bg-blue-600 focus:outline-none focus:shadow-outline text-base md:text-md cursor-pointer mt-4" onClick={e=>onPreviewTheme(theme)}>Preview</button>
             </div>
           )):(<div className="text-center text-lg">No template found</div>)
         }
