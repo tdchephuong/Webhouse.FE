@@ -1,12 +1,12 @@
 {
   "nav": {
-    "1":"Explore",
-    "2":"About Us",
-    "3":"Pricing",
-    "4":"Contact Us"
+    "1":"Khám phá",
+    "2":"Chúng tôi",
+    "3":"Giá",
+    "4":"Liên hệ"
   },
   "homePage": {
-    "welcome": "Welcome to",
+    "welcome": "Chào mừng đến",
     "welcomeTitle": "Freedom to Create the Websites You Want",
     "welcomeText": "You'd Never Imagine That Powerful Websites Could Be Made That Easy",
     "templateTitle": "Stunning Templates",

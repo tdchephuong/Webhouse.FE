@@ -57,7 +57,7 @@ export const Navbar: React.FC<TNavbar> = ({type: navbarType = 'BasicNav'}) => {
                 className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded items-center justify-center hover:text-blue-500 text-base md:text-lg font-light relative"
                 onClick={toggleDropdown}
               >
-                <span className="cursor-pointer">{t('Nav.1')}</span>
+                <span className="cursor-pointer">{t('nav.1')}</span>
                 {/* <Dropdown
                   isOpen={isOpenDropdown}
                   onClose={() => {}}
@@ -94,14 +94,14 @@ export const Navbar: React.FC<TNavbar> = ({type: navbarType = 'BasicNav'}) => {
                 exact
                 to="/"
               >
-                {t('Nav.2')}
+                {t('nav.2')}
               </NavLink>
               <NavLink
                 className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded items-center justify-center hover:text-blue-500 text-base md:text-lg font-light"
                 exact
                 to="/"
               >
-                {t('Nav.3')}
+                {t('nav.3')}
               </NavLink>
               <div
                 className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded items-center justify-center hover:text-blue-500 text-base md:text-lg font-light cursor-pointer"
@@ -116,7 +116,7 @@ export const Navbar: React.FC<TNavbar> = ({type: navbarType = 'BasicNav'}) => {
               >
                 Contact
               </NavLink> */}
-              <ContactPopupItem contactText={t('Nav.4')}/>
+              <ContactPopupItem contactText={t('nav.4')}/>
             </div>
           </div>
         </nav>

@@ -1,5 +1,6 @@
 import classNames from "classnames";
 import React, { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 
 import { Card } from "components/Card";
 // import themeApi from 'api/theme'
@@ -19,7 +20,9 @@ export const Templates: React.FC = () => {
   const [activeTemplateType, setActiveTemplateType] = useState(0);
   const [themes, setThemes] = useState<Array<TTheme>>([]);
   const [previewTheme, setPreviewThemes] = useState<TTheme>();
-  const [previewModalOpen, setPreviewModalOpen] = useState(false)
+  const [previewModalOpen, setPreviewModalOpen] = useState(false);
+  const { t } = useTranslation();
+
   const firstTemplateTypeClassName = (value: number) =>
     classNames("flex-initial cursor-pointer mr-3 py-3", {
       "text-blue-500 border-b-2 border-blue-500": activeTemplateType === value
@@ -50,7 +53,7 @@ export const Templates: React.FC = () => {
       <div className="bg-white pt-16 pb-9">
         <div className="container mx-auto px-1.5 lg:px-0">
           <div className="text-4xl text-black template-title">
-            Pick the Website Template You Love
+            {t('templatePage.title')}
           </div>
         </div>
       </div>
@@ -62,49 +65,49 @@ export const Templates: React.FC = () => {
                 className={firstTemplateTypeClassName(0)}
                 onClick={() => updateTemplateType(0)}
               >
-                All
+                {t('templatePage.category.all')}
               </div>
               <div
                 className={middleTemplateTypeClassName(1)}
                 onClick={() => updateTemplateType(1)}
               >
-                Business
+                {t('templatePage.category.business')}
               </div>
               <div
                 className={middleTemplateTypeClassName(2)}
                 onClick={() => updateTemplateType(2)}
               >
-                Services
+                {t('templatePage.category.services')}
               </div>
               <div
                 className={middleTemplateTypeClassName(3)}
                 onClick={() => updateTemplateType(3)}
               >
-                Health
+                {t('templatePage.category.health')}
               </div>
               <div
                 className={middleTemplateTypeClassName(4)}
                 onClick={() => updateTemplateType(4)}
               >
-                Beauty
+                {t('templatePage.category.beauty')}
               </div>
               <div
                 className={middleTemplateTypeClassName(5)}
                 onClick={() => updateTemplateType(5)}
               >
-                Fashion
+                {t('templatePage.category.fashion')}
               </div>
               <div
                 className={middleTemplateTypeClassName(6)}
                 onClick={() => updateTemplateType(6)}
               >
-                Landing Pages
+                {t('templatePage.category.landingPages')}
               </div>
               <div
                 className={middleTemplateTypeClassName(7)}
                 onClick={() => updateTemplateType(7)}
               >
-                Landing Pages
+                {t('templatePage.category.landingPages')}
               </div>
               <div className="flex-initial cursor-pointer ml-3 py-3">...</div>
             </div>
@@ -118,7 +121,7 @@ export const Templates: React.FC = () => {
                 <input
                   type="search"
                   className="border-0 pl-9 py-3 w-full"
-                  placeholder="Search"
+                  placeholder={t('templatePage.search')}
                 />
               </div>
             </div>

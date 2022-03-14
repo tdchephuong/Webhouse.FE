@@ -1,6 +1,7 @@
 import classNames from "classnames";
 import React, { useCallback, useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 import { Card } from "components/Card";
 // import themeApi from 'api/theme'
@@ -17,6 +18,8 @@ import "./Home.css";
 export const Home: React.FC = () => {
   const [showScroll, setShowScroll] = useState(false);
   const [themes, setThemes] = useState<Array<TTheme>>([]);
+  const { t } = useTranslation();
+
   const buttonScrollUpClass = classNames(
     "button-scroll fixed cursor-pointer",
     {
@@ -56,17 +59,17 @@ export const Home: React.FC = () => {
       <div className="container mx-auto lg:pt-24 px-1.5 lg:px-0">
         <div className="sm:flex">
           <div className="sm:w-1/2 sm:mt-0 mt-8">
-            <span className="text-xl">Welcome to</span>{" "}
+            <span className="text-xl">{t('homePage.welcome')}</span>{" "}
             <img
               className="w-24 h-4 inline-block align-baseline"
               src={logo}
               alt=""
             />
             <div className="max-w-md text-5xl text-black txt-introduction font-medium mt-4">
-              Freedom to Create the Websites You Want
+            {t('homePage.welcomeTitle')}
             </div>
             <div className="text-lg mt-1 max-w-xs">
-              You'd Never Imagine That Powerful Websites Could Be Made That Easy
+            {t('homePage.welcomeText')}
             </div>
           </div>
           <div className="sm:w-1/2 sm:mt-0 mt-8">
@@ -80,10 +83,10 @@ export const Home: React.FC = () => {
       </div>
       <div className="container mx-auto pt-14 px-1.5 lg:px-0">
         <div className="text-5xl text-black font-medium">
-          Stunning Templates
+        {t('homePage.templateTitle')}
         </div>
         <div className="text-2xl mt-1">
-          Start with free HTML website templates and bring your vision to life.
+        {t('homePage.templateText')}
         </div>
         <div className="mt-12 pb-16">
           <div className="grid gap-x-7 gap-y-9 grid-cols-2 lg:grid-cols-3">
@@ -106,7 +109,7 @@ export const Home: React.FC = () => {
               to="/templates"
               className="inline-block border border-blue-500 text-blue-500 rounded-full px-10 pt-5 pb-3.5 transition duration-500 ease select-none hover:text-white hover:bg-blue-500 text-base md:text-2xl"
             >
-              Explore All Templates
+              {t('homePage.explorerButton')}
             </NavLink>
           </div>
         </div>
@@ -116,7 +119,7 @@ export const Home: React.FC = () => {
           <div className="sm:flex">
             <div className="sm:w-1/2 sm:mt-0 mt-8">
               <div className="w-10/12 text-5xl text-black txt-introduction font-medium mt-4">
-                About Us
+                {t('homePage.aboutus')}
               </div>
               <div className="text-lg mt-3 max-w-md font-light">
                 <p className="mb-3">
@@ -136,7 +139,7 @@ export const Home: React.FC = () => {
                   to="/about-us"
                   className="inline-block border border-blue-500 text-blue-500 rounded-full px-6 pt-3.5 pb-2.5 transition duration-500 ease select-none hover:text-white hover:bg-blue-500 text-base md:text-lg"
                 >
-                  Read more
+                  {t('homePage.readMoreButton')}
                 </NavLink>
               </div>
             </div>
