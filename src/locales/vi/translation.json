@@ -1,0 +1,31 @@
+{
+  "nav": {
+    "1":"Khám phá",
+    "2":"Chúng tôi",
+    "3":"Giá",
+    "4":"Liên hệ"
+  },
+  "homePage": {
+    "welcome": "Chào mừng đến",
+    "welcomeTitle": "Freedom to Create the Websites You Want",
+    "welcomeText": "You'd Never Imagine That Powerful Websites Could Be Made That Easy",
+    "templateTitle": "Stunning Templates",
+    "templateText": "Start with free HTML website templates and bring your vision to life.",
+    "explorerButton": "Explore All Templates",
+    "aboutus": "About Us",
+    "readMoreButton": "Read more"
+  },
+  "templatePage": {
+    "title": "Pick the Website Template You Love",
+    "category": {
+      "all": "All",
+      "business": "Business",
+      "services": "Services",
+      "health": "Health",
+      "beauty": "Beauty",
+      "fashion": "Fashion",
+      "landingPages": "Landing Pages"
+    },
+    "search": "Search"
+  }
+}

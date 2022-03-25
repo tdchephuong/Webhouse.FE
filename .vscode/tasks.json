@@ -6,11 +6,7 @@
   "isShellCommand": true,
   "showOutput": "always",
   "suppressTaskName": true,
-  "tasks": [{
-      "isBuildCommand": true,
-      "taskName": "run",
-      "args": ["start"]
-    },
+  "tasks": [
     {
       "taskName": "production",
       "args": ["build:prod"]
