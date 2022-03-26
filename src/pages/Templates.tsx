@@ -5,22 +5,20 @@ import { useTranslation } from "react-i18next";
 import { Card } from "components/Card";
 // import themeApi from 'api/theme'
 import TTheme from 'api/theme.type'
-import {Modal as Modal} from "components/Modal"
+// import {Modal} from "components/Modal"
 import {themesData} from 'api/mock-theme-api';
+import Pagination from 'components/Pagination';
 
 import iconSearch from "assets/img/icon-search.svg";
-import iconRightArrow from "assets/img/icon-right-arrow.svg";
-import iconDoubleArrowRight from "assets/img/icon-double-arrow-right.svg";
-import iconRightArrowActive from "assets/img/icon-right-arrow-active.svg";
-import iconDoubleArrowRightActive from "assets/img/icon-double-arrow-right-active.svg";
 
 import "./Templates.css";
 
 export const Templates: React.FC = () => {
   const [activeTemplateType, setActiveTemplateType] = useState(0);
   const [themes, setThemes] = useState<Array<TTheme>>([]);
-  const [previewTheme, setPreviewThemes] = useState<TTheme>();
-  const [previewModalOpen, setPreviewModalOpen] = useState(false);
+  const [currentPage, setCurrentPage] = useState(0);
+  // const [previewTheme, setPreviewThemes] = useState<TTheme>();
+  // const [previewModalOpen, setPreviewModalOpen] = useState(false);
   const { t } = useTranslation();
 
   const firstTemplateTypeClassName = (value: number) =>
@@ -34,6 +32,7 @@ export const Templates: React.FC = () => {
   const updateTemplateType = (value: number) => {
     setActiveTemplateType(value);
   };
+  const itemPerPage = 9
 
   useEffect(() => {
     // themeApi().getTheme().then(docs => {
@@ -43,10 +42,10 @@ export const Templates: React.FC = () => {
     setThemes(data);
   }, [])
 
-  const onPreviewTheme = (theme:TTheme) => {
-    setPreviewThemes(theme)
-    setPreviewModalOpen(true)
-  }
+  // const onPreviewTheme = (theme:TTheme) => {
+  //   setPreviewThemes(theme)
+  //   setPreviewModalOpen(true)
+  // }
 
   return (
     <>
@@ -132,7 +131,9 @@ export const Templates: React.FC = () => {
       <div className="container mx-auto px-1.5 lg:px-0">
         <div className="grid gap-x-7 gap-y-12 grid-cols-2 lg:grid-cols-3 pt-12">
         {
-          themes?themes.map(theme => (
+          themes?themes.map((theme, index) => (
+            (index>=(itemPerPage*currentPage)&&
+            index<(itemPerPage*currentPage)+itemPerPage)&&
             <Card
               key={theme.id}
               detailLink={theme.previews?.live_site?.url}
@@ -145,59 +146,17 @@ export const Templates: React.FC = () => {
           )):(<div className="text-center text-lg">No template found</div>)
         }
         </div>
-        <div className="flex flex-col items-center mt-16 pb-24">
-          <div className="flex text-gray-700">
-            <div className=" mr-1 flex justify-center items-center cursor-pointer">
-              <img
-                className="transform rotate-180 w-6 h-6"
-                src={iconDoubleArrowRightActive}
-                alt=""
-              />
-            </div>
-            <div className=" mr-1 flex justify-center items-center cursor-pointer">
-              <img
-                className="transform rotate-180 w-6 h-6"
-                src={iconRightArrowActive}
-                alt=""
-              />
-            </div>
-            <div className="flex text-2xl">
-              <div className="px-3 md:flex justify-center items-center hidden cursor-pointer leading-5 transition duration-150 ease-in text-active-default">
-                1
-              </div>
-              <div className="px-3 md:flex justify-center items-center hidden cursor-pointer leading-5 transition duration-150 ease-in">
-                2
-              </div>
-              <div className="px-3 md:flex justify-center items-center hidden cursor-pointer leading-5 transition duration-150 ease-in">
-                3
-              </div>
-              <div className="px-3 md:flex justify-center items-center hidden cursor-pointer leading-5 transition duration-150 ease-in">
-                4
-              </div>
-              <div className="px-3 md:flex justify-center items-center hidden cursor-pointer leading-5 transition duration-150 ease-in">
-                5
-              </div>
-              <div className="px-3 md:flex justify-center items-center hidden cursor-pointer leading-5 transition duration-150 ease-in">
-                ...
-              </div>
-              <div className="px-3 md:flex justify-center items-center hidden cursor-pointer leading-5 transition duration-150 ease-in">
-                12
-              </div>
-            </div>
-            <div className="ml-1 cursor-pointer">
-              <img className="w-6 h-6" src={iconRightArrow} alt="" />
-            </div>
-            <div className="ml-1 cursor-pointer">
-              <img className="w-6 h-6" src={iconDoubleArrowRight} alt="" />
-            </div>
-          </div>
-        </div>
-        {
+        <Pagination
+          currentPage={currentPage}
+          totalItem={themes.length}
+          itemPerPage={itemPerPage}
+          onPage={(value) => setCurrentPage(value)}/>
+        {/* {
           previewTheme&&<Modal
             modalShowed={previewModalOpen} 
             toggleModal={()=>setPreviewModalOpen(false)}
             title="Preview">{previewTheme.previews.live_site.url}</Modal>
-        }
+        } */}
       </div>
     </>
   );

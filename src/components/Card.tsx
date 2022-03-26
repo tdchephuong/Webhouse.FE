@@ -3,7 +3,7 @@ import React from "react";
 
 import { TCard } from "./Card.type";
 import "./Card.css";
-import {Rating} from "components/Rating";
+import Rating from "components/Rating";
 
 export const Card: React.FC<TCard> = (props: TCard) => {
   const { img_url, name, detailLink, rating=0, number_of_sales, price_cents=0 } = props;

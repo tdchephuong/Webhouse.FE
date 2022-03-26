@@ -11,7 +11,7 @@ import reportWebVitals from "./reportWebVitals";
 import './i18n'
 
 ReactDOM.render(
-  <React.StrictMode>=
+  <React.StrictMode>
       {/* <Provider store={store}>
       <App />
     </Provider> */}

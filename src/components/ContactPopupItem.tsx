@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 
-import { ContactModal } from "./ContactModal"
+import ContactModal from "./ContactModal"
 import { TContactPopupItem } from "./ContactPopupItem.type"
 
-export const ContactPopupItem: React.FC<TContactPopupItem> = (props: TContactPopupItem) => {
+const ContactPopupItem: React.FC<TContactPopupItem> = (props: TContactPopupItem) => {
   const [previewModalOpen, setPreviewModalOpen] = useState(false)
   const { contactText = 'Contact' } = props
   const toggleContactModal = () => {
@@ -18,3 +18,5 @@ export const ContactPopupItem: React.FC<TContactPopupItem> = (props: TContactPop
     </>
   )
 }
+
+export default ContactPopupItem;

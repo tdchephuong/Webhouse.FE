@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 import { TContactModal } from "./ContactModal.type";
-import { Modal } from "./Modal"
 import classNames from "classnames";
 
-export const ContactModal:React.FC<TContactModal> = (props: TContactModal) => {
+const ContactModal:React.FC<TContactModal> = (props: TContactModal) => {
   const { modalShowed, toggleModal } = props
   const toggleModalStype = classNames({
     "hidden": !modalShowed
@@ -80,3 +79,5 @@ export const ContactModal:React.FC<TContactModal> = (props: TContactModal) => {
     </div>
   )
 }
+
+export default ContactModal;

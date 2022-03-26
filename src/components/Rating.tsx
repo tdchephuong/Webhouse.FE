@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 import {TRating} from "./Rating.type"
 import "./Rating.css";
 
-export const Rating:React.FC<TRating> = (props: TRating) => {
+const Rating:React.FC<TRating> = (props: TRating) => {
   const {color, count, ...rest} = props
   return (
     <div style={{color: color}} {...rest}>
@@ -20,3 +20,4 @@ export const Rating:React.FC<TRating> = (props: TRating) => {
     </div>
   )
 }
+export default Rating;

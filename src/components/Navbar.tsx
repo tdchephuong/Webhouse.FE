@@ -3,14 +3,14 @@ import { NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 import { TNavbar } from "./Navbar.type"
-import { ContactPopupItem } from 'components/ContactPopupItem'
+import ContactPopupItem from 'components/ContactPopupItem'
 
 import logo from "assets/img/logo.svg";
 import icon_desktop from "assets/img/detail-template/icon-destop_view.png";
 import icon_mobile from "assets/img/detail-template/icon-mobile_view.png";
 import "./Navbar.css";
 
-export const Navbar: React.FC<TNavbar> = ({type: navbarType = 'BasicNav'}) => {
+const Navbar: React.FC<TNavbar> = ({type: navbarType = 'BasicNav'}) => {
   const [active, setActive] = useState(false);
   const [isOpenDropdown, setIsOpenDropdown] = useState(false);
   const { t } = useTranslation();
@@ -155,3 +155,5 @@ export const Navbar: React.FC<TNavbar> = ({type: navbarType = 'BasicNav'}) => {
     </>
   );
 };
+
+export default Navbar;

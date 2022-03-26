@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-import { ContactPopupItem } from "components/ContactPopupItem"
+import ContactPopupItem from "components/ContactPopupItem"
 
 import logo from "assets/img/logo.svg";
 import facebook from "assets/img/logo-facebook.svg";
@@ -9,7 +9,7 @@ import linkedin from "assets/img/logo-linkedin.svg";
 import youtube from "assets/img/logo-youtube.svg";
 import insta from "assets/img/logo-instagram.svg";
 
-export const Footer: React.FC = () => {
+const Footer: React.FC = () => {
   return (
     <div className="bg-white">
       <div className="border-t border-default" />
@@ -100,3 +100,5 @@ export const Footer: React.FC = () => {
     </div>
   );
 };
+
+export default Footer;

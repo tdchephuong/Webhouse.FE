@@ -3,7 +3,7 @@ import React from "react";
 import { TModal } from "./Modal.type";
 import classNames from "classnames";
 
-export const Modal:React.FC<TModal> = (props: TModal) => {
+const Modal:React.FC<TModal> = (props: TModal) => {
   const { modalShowed, children, title, toggleModal, footer } = props
   const toggleModalStype = classNames({
     "hidden": !modalShowed
@@ -42,3 +42,5 @@ export const Modal:React.FC<TModal> = (props: TModal) => {
     </div>
   )
 }
+
+export default Modal;
