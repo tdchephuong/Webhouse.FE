@@ -11,7 +11,7 @@ const ContactModal:React.FC<TContactModal> = (props: TContactModal) => {
 
   return (
     <div className={toggleModalStype}>
-        <div className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none" aria-hidden="true">
+        <div className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none bg-black bg-opacity-25" aria-hidden="true" onClick={toggleModal}>
           <div className="sm:flex items-center">
           <div className="sm:w-2/5 bg-yellow-400 px-5 py-10 z-10">
             <div>
@@ -74,8 +74,6 @@ const ContactModal:React.FC<TContactModal> = (props: TContactModal) => {
           </div>
         </div>
         </div>
-      
-      <div className="opacity-25 fixed inset-0 z-40 bg-black"></div>
     </div>
   )
 }

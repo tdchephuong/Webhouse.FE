@@ -4,5 +4,5 @@ export interface TModal {
   header?: React.ReactNode
   footer?: React.ReactNode
   title?: String
-  toggleModal?: () => void
+  toggleModal?: (e: any) => void
 }
